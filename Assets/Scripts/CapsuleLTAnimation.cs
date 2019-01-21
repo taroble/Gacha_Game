@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class CapsuleLTAnimation : MonoBehaviour
 {
     SpriteRenderer sr;
+    Image fadeScreenImage;
     public Sprite halfCapSprite;
 
     public GameObject topTextPrefab;
@@ -13,6 +16,7 @@ public class CapsuleLTAnimation : MonoBehaviour
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
+        fadeScreenImage = GameObject.FindGameObjectWithTag("Render Canvas").transform.Find("Screen Fade").GetComponent<Image>();    //absolutely disgusting
         Enlarge();
     }
 
@@ -23,9 +27,14 @@ public class CapsuleLTAnimation : MonoBehaviour
 
     IEnumerator GachaFullAnimation()
     {
-        //Float upwards, grow larger
+        //Float upwards, grow larger, fade screen
         sr.sortingLayerName = "Foreground";
         sr.sortingOrder = 1;
+        //LeanTween.alpha(GameObject.FindGameObjectWithTag("Render Canvas").transform.Find("Screen Fade").gameObject, 0.25f, 0.75f);
+        LeanTween.value(0, 0.25f, 0.75f).setOnUpdate((float value) =>
+        {
+            fadeScreenImage.color = new Color(fadeScreenImage.color.r, fadeScreenImage.color.g, fadeScreenImage.color.b, value);
+        });
         LeanTween.moveY(gameObject, transform.position.y + 4, 0.75f).setEase(LeanTweenType.easeOutCubic);
         LeanTween.scale(gameObject, transform.localScale * 2f, 0.75f).setEase(LeanTweenType.easeOutQuad);
         yield return new WaitForSeconds(0.65f);
@@ -40,13 +49,13 @@ public class CapsuleLTAnimation : MonoBehaviour
         GameObject lHalf = new GameObject("Left Half");
         lHalf.AddComponent<SpriteRenderer>().sprite = halfCapSprite;
         lHalf.GetComponent<SpriteRenderer>().sortingLayerName = "Foreground";
-        lHalf.GetComponent<SpriteRenderer>().sortingOrder = 1;
+        lHalf.GetComponent<SpriteRenderer>().sortingOrder = 2;
 
         GameObject rHalf = new GameObject("Right Half");
         rHalf.AddComponent<SpriteRenderer>().sprite = halfCapSprite;
         rHalf.GetComponent<SpriteRenderer>().flipX = true;
         rHalf.GetComponent<SpriteRenderer>().sortingLayerName = "Foreground";
-        rHalf.GetComponent<SpriteRenderer>().sortingOrder = 1;
+        rHalf.GetComponent<SpriteRenderer>().sortingOrder = 2;
 
         lHalf.transform.position = transform.position + Vector3.left;
         lHalf.transform.localScale *= 0.75f;
@@ -59,11 +68,13 @@ public class CapsuleLTAnimation : MonoBehaviour
 
         //Spawn text objects
         GameObject topText = Instantiate(topTextPrefab);
+        topText.GetComponent<TextMeshProUGUI>().text = "You received:";
         topText.transform.SetParent(GameObject.FindGameObjectWithTag("Render Canvas").transform, false);
         yield return new WaitForSeconds(0.75f);
 
         GameObject bottomText = Instantiate(bottomTextPrefab);
         bottomText.transform.SetParent(GameObject.FindGameObjectWithTag("Render Canvas").transform, false);
+        bottomText.GetComponent<TextMeshProUGUI>().text = "STICKY HAND??";
         yield return null;
     }
 }
