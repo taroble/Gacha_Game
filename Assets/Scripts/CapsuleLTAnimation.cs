@@ -6,20 +6,15 @@ public class CapsuleLTAnimation : MonoBehaviour
 {
     SpriteRenderer sr;
     public Sprite halfCapSprite;
-    
+
+    public GameObject topTextPrefab;
+    public GameObject bottomTextPrefab;
 
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
         Enlarge();
     }
-
-    void Update()
-    {
-        
-    }
-
-
 
     void Enlarge()
     {
@@ -61,5 +56,14 @@ public class CapsuleLTAnimation : MonoBehaviour
         LeanTween.moveX(lHalf, lHalf.transform.position.x - 2, 0.5f).setEase(LeanTweenType.easeOutCubic);
         LeanTween.moveX(rHalf, rHalf.transform.position.x + 2, 0.5f).setEase(LeanTweenType.easeOutCubic);
         yield return new WaitForSeconds(0.5f);
+
+        //Spawn text objects
+        GameObject topText = Instantiate(topTextPrefab);
+        topText.transform.SetParent(GameObject.FindGameObjectWithTag("Render Canvas").transform, false);
+        yield return new WaitForSeconds(0.75f);
+
+        GameObject bottomText = Instantiate(bottomTextPrefab);
+        bottomText.transform.SetParent(GameObject.FindGameObjectWithTag("Render Canvas").transform, false);
+        yield return null;
     }
 }

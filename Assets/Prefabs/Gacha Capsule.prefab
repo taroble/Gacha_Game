@@ -94,6 +94,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   halfCapSprite: {fileID: 21300000, guid: 96fae3ee50c56324ba1a3320f9d797fd, type: 3}
+  topTextPrefab: {fileID: 8165507901574264694, guid: 42063d5497127a0459c56483a5dc5003,
+    type: 3}
+  bottomTextPrefab: {fileID: 7439496245854248651, guid: 5ba12d0ced409a2448eb1bd21ebc4dd9,
+    type: 3}
 --- !u!114 &1737153943185772697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,3 +110,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1420b0eb842b2de4f91a9d6480d3ceb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tmp: {fileID: 0}
+  endY: 0
