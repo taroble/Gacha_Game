@@ -9,6 +9,7 @@ public class CapsuleLTAnimation : MonoBehaviour
     SpriteRenderer sr;
     Image fadeScreenImage;
     public Sprite halfCapSprite;
+    public Sprite temporarySprite;
 
     public GameObject topTextPrefab;
     public GameObject bottomTextPrefab;
@@ -65,6 +66,14 @@ public class CapsuleLTAnimation : MonoBehaviour
 
         LeanTween.moveX(lHalf, lHalf.transform.position.x - 2, 0.5f).setEase(LeanTweenType.easeOutCubic);
         LeanTween.moveX(rHalf, rHalf.transform.position.x + 2, 0.5f).setEase(LeanTweenType.easeOutCubic);
+
+        GameObject gachaItem = new GameObject("Gacha Item");
+        gachaItem.AddComponent<SpriteRenderer>().sprite = temporarySprite;
+        gachaItem.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 0);
+        gachaItem.GetComponent<SpriteRenderer>().sortingLayerName = "Foreground";
+        gachaItem.GetComponent<SpriteRenderer>().sortingOrder = 2;
+        LeanTween.scale(gachaItem, gachaItem.transform.localScale * 2, 1.5f).setEase(LeanTweenType.easeOutCubic);
+        LeanTween.alpha(gachaItem, 1, 0.25f).setEase(LeanTweenType.easeOutCubic);
         yield return new WaitForSeconds(0.5f);
 
         //Spawn text objects
@@ -75,7 +84,7 @@ public class CapsuleLTAnimation : MonoBehaviour
 
         GameObject bottomText = Instantiate(bottomTextPrefab);
         bottomText.transform.SetParent(GameObject.FindGameObjectWithTag("Render Canvas").transform, false);
-        bottomText.GetComponent<TextMeshProUGUI>().text = "STICKY HAND??";
+        bottomText.GetComponent<TextMeshProUGUI>().text = "a bean??";
         yield return null;
     }
 }

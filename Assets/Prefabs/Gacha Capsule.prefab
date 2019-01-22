@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8332510211035954146}
   - component: {fileID: 8332510211035954145}
   - component: {fileID: 8143003848719170490}
-  - component: {fileID: 1737153943185772697}
   m_Layer: 0
   m_Name: Gacha Capsule
   m_TagString: Untagged
@@ -27,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8332510211035954144}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.074, y: 0.638, z: 0}
+  m_LocalPosition: {x: 0.07413561, y: -1.6330601, z: 0}
   m_LocalScale: {x: 0.30685, y: 0.30685, z: 0.30685}
   m_Children: []
   m_Father: {fileID: 0}
@@ -94,21 +93,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   halfCapSprite: {fileID: 21300000, guid: 96fae3ee50c56324ba1a3320f9d797fd, type: 3}
+  temporarySprite: {fileID: 21300000, guid: a6a0c18487c50b5428eb736388a7b802, type: 3}
   topTextPrefab: {fileID: 8165507901574264694, guid: 42063d5497127a0459c56483a5dc5003,
     type: 3}
   bottomTextPrefab: {fileID: 7439496245854248651, guid: 5ba12d0ced409a2448eb1bd21ebc4dd9,
     type: 3}
---- !u!114 &1737153943185772697
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8332510211035954144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1420b0eb842b2de4f91a9d6480d3ceb3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tmp: {fileID: 0}
-  endY: 0

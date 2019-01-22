@@ -12,7 +12,11 @@ public class MachineKnob : MonoBehaviour
         if (clickable && Input.GetMouseButtonDown(0))
         {
             clickable = false;
-            Instantiate(capsulePrefab);
+            LeanTween.rotateZ(gameObject, -720, 1).setEase(LeanTweenType.easeOutCubic).setOnComplete(() =>
+            {
+                Instantiate(capsulePrefab);
+                transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, 0);
+            });
         }
     }
 }
