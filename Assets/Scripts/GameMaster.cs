@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class GameMaster : MonoBehaviour
 {
-    void Start()
+    public static GameMaster instance;
+
+    void Awake()
     {
-
-    }
-
-    void Update()
-    {
-
+        if (instance != null && instance != this)
+            Destroy(gameObject);
+        else
+            instance = this;
     }
 }

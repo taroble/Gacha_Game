@@ -45,6 +45,7 @@ public class CapsuleLTAnimation : MonoBehaviour
 
         //Split open, revealing contents
         sr.enabled = false;
+        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraShakeHandler>().ShakeCamera(0.15f, 0.35f);
 
         GameObject lHalf = new GameObject("Left Half");
         lHalf.AddComponent<SpriteRenderer>().sprite = halfCapSprite;
