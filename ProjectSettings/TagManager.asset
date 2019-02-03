@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Render Canvas
+  - Text Canvas
+  - Fade Canvas
   layers:
   - Default
   - TransparentFX

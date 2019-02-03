@@ -144,7 +144,7 @@ Transform:
   - {fileID: 1396002002}
   - {fileID: 471130549}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &193641503
 GameObject:
@@ -158,8 +158,8 @@ GameObject:
   - component: {fileID: 193641505}
   - component: {fileID: 193641504}
   m_Layer: 0
-  m_Name: Canvas
-  m_TagString: Render Canvas
+  m_Name: Fade Canvas
+  m_TagString: Fade Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -597,6 +597,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdb01b87e300d934eaa24a0da3c7d06c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemImages:
+  - {fileID: 21300000, guid: a6a0c18487c50b5428eb736388a7b802, type: 3}
+  - {fileID: 21300000, guid: a6a0c18487c50b5428eb736388a7b802, type: 3}
+  - {fileID: 21300000, guid: a6a0c18487c50b5428eb736388a7b802, type: 3}
+  - {fileID: 21300000, guid: a6a0c18487c50b5428eb736388a7b802, type: 3}
+  - {fileID: 21300000, guid: a6a0c18487c50b5428eb736388a7b802, type: 3}
+  - {fileID: 21300000, guid: a6a0c18487c50b5428eb736388a7b802, type: 3}
+  - {fileID: 21300000, guid: a6a0c18487c50b5428eb736388a7b802, type: 3}
+  - {fileID: 21300000, guid: a6a0c18487c50b5428eb736388a7b802, type: 3}
+  - {fileID: 21300000, guid: a6a0c18487c50b5428eb736388a7b802, type: 3}
+  - {fileID: 21300000, guid: a6a0c18487c50b5428eb736388a7b802, type: 3}
+  - {fileID: 21300000, guid: a6a0c18487c50b5428eb736388a7b802, type: 3}
+  - {fileID: 21300000, guid: a6a0c18487c50b5428eb736388a7b802, type: 3}
+  - {fileID: 21300000, guid: a6a0c18487c50b5428eb736388a7b802, type: 3}
+  - {fileID: 21300000, guid: a6a0c18487c50b5428eb736388a7b802, type: 3}
+  - {fileID: 21300000, guid: a6a0c18487c50b5428eb736388a7b802, type: 3}
+  - {fileID: 21300000, guid: a6a0c18487c50b5428eb736388a7b802, type: 3}
+  - {fileID: 21300000, guid: a6a0c18487c50b5428eb736388a7b802, type: 3}
+  - {fileID: 21300000, guid: a6a0c18487c50b5428eb736388a7b802, type: 3}
+  - {fileID: 21300000, guid: a6a0c18487c50b5428eb736388a7b802, type: 3}
+  - {fileID: 21300000, guid: a6a0c18487c50b5428eb736388a7b802, type: 3}
+  - {fileID: 21300000, guid: e575a8606d4d96e408c79f511a21a829, type: 3}
+  - {fileID: 21300000, guid: 1c92ad70ec11a734a939a769cc5c867d, type: 3}
+  - {fileID: 21300000, guid: 9a6b548ad84f71d4094fef1671a6e943, type: 3}
+  - {fileID: 21300000, guid: 66f2c65a7e8d5234b9a71bd3b277f596, type: 3}
+  - {fileID: 21300000, guid: d438b36b9297b5642bfb04bfca8f1222, type: 3}
+  - {fileID: 21300000, guid: 4e75a3bc3b4b82744881f6fa6f94c2a4, type: 3}
+  - {fileID: 21300000, guid: 9e547250a4bb05347bafeab311f2b43e, type: 3}
+  - {fileID: 21300000, guid: 581c49e121822d043b0a8581baeadf4f, type: 3}
+  - {fileID: 21300000, guid: d90714589d2728e4688812c475aade38, type: 3}
+  - {fileID: 21300000, guid: a345122399023ec43954c18e19bdfbc3, type: 3}
+  - {fileID: 21300000, guid: a09eb8a1ddedb204ca2b923ae5d6e7c5, type: 3}
+  - {fileID: 21300000, guid: c42b529c5781b3046b49a39c0c7005b9, type: 3}
+  - {fileID: 21300000, guid: 13147f5939e16ed4c99bdc5b39cb452d, type: 3}
+  - {fileID: 21300000, guid: a6a0c18487c50b5428eb736388a7b802, type: 3}
+  - {fileID: 21300000, guid: a6a0c18487c50b5428eb736388a7b802, type: 3}
+  - {fileID: 21300000, guid: a6a0c18487c50b5428eb736388a7b802, type: 3}
 --- !u!1 &1437899789
 GameObject:
   m_ObjectHideFlags: 0
@@ -690,7 +727,7 @@ Transform:
   m_LocalScale: {x: 0.33312497, y: 0.096421875, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1437899793
 BoxCollider2D:
@@ -797,6 +834,81 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1846392637
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1846392640}
+  - component: {fileID: 1846392639}
+  - component: {fileID: 1846392638}
+  m_Layer: 0
+  m_Name: Text Canvas
+  m_TagString: Text Canvas
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1846392638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846392637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!223 &1846392639
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846392637}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 519420031}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_SortingLayerID: -76791033
+  m_SortingOrder: 2
+  m_TargetDisplay: 0
+--- !u!224 &1846392640
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846392637}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.009328762, y: 0.009328762, z: 0.009328762}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1920, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2019026091
 GameObject:
   m_ObjectHideFlags: 0
@@ -861,7 +973,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2113665432
 GameObject:
@@ -1014,5 +1126,5 @@ Transform:
   m_LocalScale: {x: 0.4735, y: 0.4735, z: 0.4735}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
