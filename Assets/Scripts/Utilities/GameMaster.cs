@@ -76,6 +76,8 @@ public class GameMaster : MonoBehaviour
 
     public Item GrabRandomItem()
     {
+        Item receivedItem;
+
         float commonWeight = rarityChances[0] + rarityChances[1] + rarityChances[2] + rarityChances[3];
         float uncommonWeight = rarityChances[1] + rarityChances[2] + rarityChances[3];
         float rareWeight = rarityChances[2] + rarityChances[3];
@@ -84,23 +86,27 @@ public class GameMaster : MonoBehaviour
         float randNum = Random.Range(0f, 100f);
         if (randNum <= commonWeight && randNum > uncommonWeight)        //If 100 > randNum > 55
         {
-            return commonItems[Random.Range(0, commonItems.Count - 1)];
+            receivedItem = commonItems[Random.Range(0, commonItems.Count - 1)];
         }
         else if (randNum <= uncommonWeight && randNum > rareWeight)     //If 55 > randNum > 25
         {
-            return uncommonItems[Random.Range(0, uncommonItems.Count - 1)];
+            receivedItem = uncommonItems[Random.Range(0, uncommonItems.Count - 1)];
         }
         else if (randNum <= rareWeight && randNum > ultraRareWeight)    //If 25 > randNum > 9
         {
-            return rareItems[Random.Range(0, rareItems.Count - 1)];
+            receivedItem = rareItems[Random.Range(0, rareItems.Count - 1)];
         }
         else if (randNum <= ultraRareWeight && randNum > 0.001f)        //If 9 > randNum > 0
         {
-            return ultraRareItems[Random.Range(0, ultraRareItems.Count - 1)];
+            receivedItem = ultraRareItems[Random.Range(0, ultraRareItems.Count - 1)];
         }
         else
         {
-            return commonItems[Random.Range(0, commonItems.Count - 1)];
+            receivedItem = commonItems[Random.Range(0, commonItems.Count - 1)];
         }
+
+        receivedItem.amountOwned++;
+        print(receivedItem.itemName + ": " + receivedItem.amountOwned);
+        return receivedItem;
     }
 }
