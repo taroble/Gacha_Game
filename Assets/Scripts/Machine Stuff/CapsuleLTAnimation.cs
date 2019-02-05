@@ -89,6 +89,10 @@ public class CapsuleLTAnimation : MonoBehaviour
 
     IEnumerator GachaFullAnimation()
     {
+        //Fall downwards
+        LeanTween.moveY(gameObject, -3.8f, 0.5f).setEase(LeanTweenType.easeOutCubic);
+        yield return new WaitForSeconds(0.5f);
+
         //Float upwards, grow larger, fade screen
         sr.sortingLayerName = "Foreground";
         sr.sortingOrder = 1;
