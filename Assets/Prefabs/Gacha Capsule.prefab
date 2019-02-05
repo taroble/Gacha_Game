@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8332510211035954144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8332510211035954146}
+  - component: {fileID: 8332510211035954145}
+  - component: {fileID: 8143003848719170490}
+  m_Layer: 0
+  m_Name: Gacha Capsule
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8332510211035954146
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8332510211035954144}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -2.5, z: 0}
+  m_LocalScale: {x: 0.85, y: 0.85, z: 0.85}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &8332510211035954145
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8332510211035954144}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: a6a0c18487c50b5428eb736388a7b802, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.4, y: 1.4}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &8143003848719170490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8332510211035954144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdcc6ad3612e4bb4a8e7580b66ac0838, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commonCapsule: {fileID: 21300000, guid: bc081dd535509ab4387c0c3ad6d5bf9d, type: 3}
+  uncommonCapsule: {fileID: 21300000, guid: e2d051e356a73244b8ccfcd8f7ff41ba, type: 3}
+  rareCapsule: {fileID: 21300000, guid: af9b11ce72f6aae468b87bbcca94cbfc, type: 3}
+  ultraRareCapsule: {fileID: 21300000, guid: c823b8d4a16a55d4cb475878c6e95a63, type: 3}
+  commonCapsuleTop: {fileID: 21300000, guid: 6bf255dc4f9716d42a1ef9bcfe256f1c, type: 3}
+  uncommonCapsuleTop: {fileID: 21300000, guid: b8918a86aaab60046b00998f02cead27, type: 3}
+  rareCapsuleTop: {fileID: 21300000, guid: 5fe0687eb0014a84580e5e7e8182ffdf, type: 3}
+  ultraRareCapsuleTop: {fileID: 21300000, guid: 9e7d74bc86ec7f44f960de41a682f40a,
+    type: 3}
+  capsuleBottom: {fileID: 21300000, guid: be9355a8fd86ef24798b998c3d58b5c2, type: 3}
+  machineKnob: {fileID: 0}
+  topTextPrefab: {fileID: 8165507901574264694, guid: 42063d5497127a0459c56483a5dc5003,
+    type: 3}
+  bottomTextPrefab: {fileID: 7439496245854248651, guid: 5ba12d0ced409a2448eb1bd21ebc4dd9,
+    type: 3}
