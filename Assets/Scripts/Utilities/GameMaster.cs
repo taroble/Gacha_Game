@@ -6,6 +6,8 @@ public class GameMaster : MonoBehaviour
 {
     public static GameMaster instance;
     TextAsset itemData;
+    
+    public int quarters;
 
     List<Item> commonItems = new List<Item>();
     List<Item> uncommonItems = new List<Item>();
@@ -106,7 +108,7 @@ public class GameMaster : MonoBehaviour
         }
 
         receivedItem.amountOwned++;
-        print(receivedItem.itemName + ": " + receivedItem.amountOwned);
+        //print(receivedItem.itemName + ": " + receivedItem.amountOwned);
         return receivedItem;
     }
 }

@@ -2,20 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class MachineKnob : MonoBehaviour
 {
-    public enum State { Idle, Twisting, Dispensing, Displaying };
+    public enum State { Idle, Jammed, Twisting, Dispensing, Displaying };
     State state;
     GameObject currentCapsule;
 
     public Image fadeScreenImage;
+    public TextMeshProUGUI quarterCounter;
 
     public GameObject capsulePrefab;
 
     void Start()
     {
         state = State.Idle;
+        quarterCounter.text = GameMaster.instance.quarters.ToString();
     }
 
     void Update()
@@ -23,6 +26,9 @@ public class MachineKnob : MonoBehaviour
         switch (state)
         {
             case State.Idle:
+                break;
+
+            case State.Jammed:
                 break;
 
             case State.Twisting:
@@ -53,20 +59,50 @@ public class MachineKnob : MonoBehaviour
     {
         if (state == State.Idle && Input.GetMouseButtonDown(0))
         {
-            state = State.Twisting;
-            float rotateAmt = (Random.Range(0, 20) == 0) ? -6969f : -720f;
-            LeanTween.rotateZ(gameObject, rotateAmt, 1).setEase(LeanTweenType.easeOutCubic).setOnComplete(() =>
+            if (GameMaster.instance.quarters > 0)
             {
-                state = State.Dispensing;
-                currentCapsule = Instantiate(capsulePrefab);
-                currentCapsule.GetComponent<CapsuleLTAnimation>().machineKnob = this;
-                transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, 0);
-            });
+                GameMaster.instance.quarters--;
+                quarterCounter.text = GameMaster.instance.quarters.ToString();
+                state = State.Twisting;
+                float rotateAmt = (Random.Range(0, 20) == 0) ? -6969f : -720f;
+                LeanTween.rotateZ(gameObject, rotateAmt, 1).setEase(LeanTweenType.easeOutCubic).setOnComplete(() =>
+                {
+                    state = State.Dispensing;
+                    currentCapsule = Instantiate(capsulePrefab);
+                    currentCapsule.GetComponent<CapsuleLTAnimation>().machineKnob = this;
+                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, 0);
+                });
+            }
+            else
+            {
+                state = State.Jammed;
+                StartCoroutine(JammedAnimation());
+            }
         }
     }
 
     public void SetState(State newState)
     {
         state = newState;
+    }
+
+    IEnumerator JammedAnimation()
+    {
+        LeanTween.rotateZ(gameObject, 15, 0.15f).setEase(LeanTweenType.easeOutCubic);
+        yield return new WaitForSeconds(0.15f);
+
+        LeanTween.rotateZ(gameObject, -15, 0.15f).setEase(LeanTweenType.easeOutCubic);
+        yield return new WaitForSeconds(0.15f);
+
+        LeanTween.rotateZ(gameObject, 15, 0.15f).setEase(LeanTweenType.easeOutCubic);
+        yield return new WaitForSeconds(0.15f);
+
+        LeanTween.rotateZ(gameObject, -15, 0.15f).setEase(LeanTweenType.easeOutCubic);
+        yield return new WaitForSeconds(0.15f);
+
+        LeanTween.rotateZ(gameObject, 0, 0.15f).setEase(LeanTweenType.easeOutCubic);
+        yield return new WaitForSeconds(0.15f);
+
+        state = State.Idle;
     }
 }
