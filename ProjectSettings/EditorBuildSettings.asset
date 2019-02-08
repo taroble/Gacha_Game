@@ -9,12 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/MapScene.unity
     guid: eab1f72fcbc3511448fdc3cae431ceae
   - enabled: 1
-    path: Assets/Scenes/StoreScene.unity
-    guid: d734be0d4ec557841905d03b64c1b1ee
-  - enabled: 1
     path: Assets/Scenes/FountainScene.unity
     guid: 1d64c71f2974b1b4092b4b64c59b76df
   - enabled: 1
     path: Assets/Scenes/HomeScene.unity
     guid: 243b9c25418b40444888b42c456dca04
+  - enabled: 1
+    path: Assets/Scenes/MachineScene.unity
+    guid: 98d83f449fc55fb4c9333123095a6e10
   m_configObjects: {}
