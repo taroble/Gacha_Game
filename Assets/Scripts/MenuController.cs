@@ -30,7 +30,7 @@ public class MenuController : MonoBehaviour
 	}
 
 	public void sceneStore(){
-		SceneManager.LoadScene("StoreScene");
+		SceneManager.LoadScene("MachineScene");
 	}
 
 }
