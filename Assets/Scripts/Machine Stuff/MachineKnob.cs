@@ -41,8 +41,6 @@ public class MachineKnob : MonoBehaviour
                 break;
 
             case State.Dispensing:
-                                playsound(2);
-
                 if (Input.GetMouseButtonDown(0))
                 {
                     currentCapsule.GetComponent<CapsuleLTAnimation>().SkipAnimation();
@@ -92,7 +90,8 @@ public class MachineKnob : MonoBehaviour
         }
     }
 
-    void playsound(int clip){
+    public void playsound(int clip)
+    {
         aSource.clip = sounds[clip];
         aSource.Play();
     }

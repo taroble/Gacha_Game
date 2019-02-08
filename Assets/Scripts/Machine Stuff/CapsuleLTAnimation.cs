@@ -111,6 +111,7 @@ public class CapsuleLTAnimation : MonoBehaviour
 
         //Split open, revealing contents
         sr.enabled = false;
+        machineKnob.playsound(2);
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraShakeHandler>().ShakeCamera(0.15f, 0.35f);
 
         lHalf = new GameObject("Left Half");
