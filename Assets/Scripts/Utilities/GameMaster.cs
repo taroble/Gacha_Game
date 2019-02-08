@@ -25,6 +25,7 @@ public class GameMaster : MonoBehaviour
             Destroy(gameObject);
         else
             instance = this;
+        DontDestroyOnLoad(this);
 
         itemData = Resources.Load<TextAsset>("Item Database");
         PopulateItemsArray();
