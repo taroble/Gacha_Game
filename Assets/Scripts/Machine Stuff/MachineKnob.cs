@@ -15,10 +15,16 @@ public class MachineKnob : MonoBehaviour
 
     public GameObject capsulePrefab;
 
+    private AudioSource aSource;
+    public AudioClip[] sounds;
+
+
     void Start()
     {
         state = State.Idle;
         quarterCounter.text = GameMaster.instance.quarters.ToString();
+        aSource = GetComponent<AudioSource>();
+
     }
 
     void Update()
@@ -35,6 +41,8 @@ public class MachineKnob : MonoBehaviour
                 break;
 
             case State.Dispensing:
+                                playsound(2);
+
                 if (Input.GetMouseButtonDown(0))
                 {
                     currentCapsule.GetComponent<CapsuleLTAnimation>().SkipAnimation();
@@ -72,13 +80,21 @@ public class MachineKnob : MonoBehaviour
                     currentCapsule.GetComponent<CapsuleLTAnimation>().machineKnob = this;
                     transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, 0);
                 });
+                playsound(0);
+
             }
             else
             {
                 state = State.Jammed;
                 StartCoroutine(JammedAnimation());
+                playsound(1);
             }
         }
+    }
+
+    void playsound(int clip){
+        aSource.clip = sounds[clip];
+        aSource.Play();
     }
 
     public void SetState(State newState)
