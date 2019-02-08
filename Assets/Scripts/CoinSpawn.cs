@@ -8,6 +8,7 @@ public class CoinSpawn : MonoBehaviour
 	public float minSpawnTimerLength;
 	public float maxSpawnTimerLength;
 	float spawnTimer;
+	
 
 	// Use this for initialization
 	void Start () {
@@ -23,9 +24,11 @@ public class CoinSpawn : MonoBehaviour
 			if (rarity % 5 != 0) {
 				Instantiate(coins[0], new Vector2(-15f + Random.Range(0,30f),-8f + Random.Range(0,17f)), Quaternion.identity);
 
+
 			}
 			else {
 				Instantiate(coins[1], new Vector2(-15f + Random.Range(0,30f),-8f + Random.Range(0,17f)), Quaternion.identity);
+
 			}
 		}
 	}

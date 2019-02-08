@@ -5,13 +5,12 @@ using UnityEngine;
 public class CoinGold : MonoBehaviour
 {
 
-	[HideInInspector]
-	public GameMaster gameMaster;
+    private AudioSource aSource;
 
 	void Start()
 	{
 		GetComponent<SpriteRenderer>().color = Color.cyan;
-
+		aSource = GetComponent<AudioSource>();
 	}
 
 	void Update()
@@ -22,9 +21,10 @@ public class CoinGold : MonoBehaviour
 	void OnMouseOver(){
 		if (Input.GetMouseButtonDown(0)) {
 			Debug.Log("clicked");
+			aSource.Play();
 
 			GetComponent<SpriteRenderer>().color = Color.white;
-			gameMaster.quarters = gameMaster.quarters + 5;
+			GameMaster.instance.quarters = GameMaster.instance.quarters + 5;
 			Destroy(gameObject);
 		}		
 	}
