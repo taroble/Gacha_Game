@@ -249,7 +249,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: 09870544dd2c1304982ed2b240deecd5, type: 3}
+  m_Texture: {fileID: 2800000, guid: 0cfc54fbd242e6543843aa737d37210a, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -357,7 +357,7 @@ GameObject:
   - component: {fileID: 1263280299}
   - component: {fileID: 1263280298}
   m_Layer: 5
-  m_Name: Home
+  m_Name: Back Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -377,10 +377,10 @@ RectTransform:
   m_Father: {fileID: 1063745906}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.69875, y: 0.14279413}
-  m_AnchorMax: {x: 0.94375, y: 0.70682365}
-  m_AnchoredPosition: {x: -2.980011, y: 0.19998169}
-  m_SizeDelta: {x: 14.7599945, y: 10.540009}
+  m_AnchorMin: {x: 0.078139, y: 0.855477}
+  m_AnchorMax: {x: 0.078139, y: 0.855477}
+  m_AnchoredPosition: {x: 1, y: 4}
+  m_SizeDelta: {x: 90.6, y: 94.18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1263280298
 MonoBehaviour:
@@ -409,9 +409,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 688ebea78be89e64f9402725ecab249b,
+    m_HighlightedSprite: {fileID: 21300000, guid: 4110027356043604e8639f1ce89185a3,
       type: 3}
-    m_PressedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 21300000, guid: 4110027356043604e8639f1ce89185a3, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -456,9 +456,9 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: e31b1b7af465d8b4f94185bdbc010575, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 176f2fb204ef48448a3439a37d910086, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
