@@ -28,7 +28,7 @@ public class CycleThroughColors : MonoBehaviour
             cycleTimer += cycleTimerLength;
             currentColor++;
             if (currentColor >= colors.Length) currentColor = 0;
-            sr.color = colors[currentColor];
+            sr.color = new Color(colors[currentColor].r, colors[currentColor].g, colors[currentColor].b, sr.color.a);
         }
     }
 }

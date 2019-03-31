@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2564886750009614003}
   - component: {fileID: 2564886750009614002}
   - component: {fileID: 2564886750009614000}
-  - component: {fileID: 3030304007676115178}
+  - component: {fileID: 5023686785096458965}
   - component: {fileID: 4186232301116020576}
   - component: {fileID: 2564886750009613965}
   - component: {fileID: 2564886750009613964}
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef688501725a6a6409764744ca2c2f7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 1
+  value: 10
 --- !u!114 &2564886750009614002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25882a90027f3f841b6572dbe8be3635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  repulsionForce: 25
+  repulsionForce: 20
   speedLimit: 15
 --- !u!114 &2564886750009614000
 MonoBehaviour:
@@ -133,7 +133,7 @@ MonoBehaviour:
   - {r: 0.6179246, g: 0.6179246, b: 1, a: 1}
   - {r: 0.94892013, g: 0.6462264, b: 1, a: 1}
   cycleTimerLength: 0.1
---- !u!114 &3030304007676115178
+--- !u!114 &5023686785096458965
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,10 +142,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2564886750009613961}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a324b9950ed7bf49a855d1d604bf95e, type: 3}
+  m_Script: {fileID: 11500000, guid: a5ead181c49ff444a8dc25616e4a9272, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   growTime: 0.5
+  shrinkTime: 10
 --- !u!114 &4186232301116020576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,7 +175,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.25
+  m_Radius: 1.21
 --- !u!50 &2564886750009613964
 Rigidbody2D:
   serializedVersion: 4

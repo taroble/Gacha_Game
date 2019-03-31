@@ -6,9 +6,11 @@ public class CoinSpawner : MonoBehaviour
 {
     public GameObject normalCoin;
     public GameObject rainbowCoin;
+    public GameObject coinHolder;
 
     public float minSpawnTimerLength;
     public float maxSpawnTimerLength;
+    public int maxNumberOfCoinsOnScreen;
 
     float spawnTimer;
     Vector2[] spawnPositions;
@@ -35,12 +37,22 @@ public class CoinSpawner : MonoBehaviour
         if (spawnTimer <= 0)
         {
             spawnTimer += Random.Range(minSpawnTimerLength, maxSpawnTimerLength);
-            Vector2 spawnPosition = spawnPositions[Random.Range(0, spawnPositions.Length)];
 
-            if (Random.Range(0, 100) < 5)
-                Instantiate(rainbowCoin, spawnPosition, Quaternion.identity);
-            else
-                Instantiate(normalCoin, spawnPosition, Quaternion.identity);
+            if (coinHolder.transform.childCount < maxNumberOfCoinsOnScreen)
+            {
+                Vector2 spawnPosition = spawnPositions[Random.Range(0, spawnPositions.Length)];
+
+                if (Random.Range(0, 100) < 5)
+                {
+                    GameObject rCoin = Instantiate(rainbowCoin, spawnPosition, Quaternion.identity);
+                    rCoin.transform.parent = coinHolder.transform;
+                }
+                else
+                {
+                    GameObject nCoin = Instantiate(normalCoin, spawnPosition, Quaternion.identity);
+                    nCoin.transform.parent = coinHolder.transform;
+                }
+            }
         }
     }
 }
