@@ -11,10 +11,7 @@ public class MachineKnob : MonoBehaviour
     GameObject currentCapsule;
 
     public Image fadeScreenImage;
-    public TextMeshProUGUI quarterCounter;
-
     public GameObject capsulePrefab;
-
     private AudioSource aSource;
     public AudioClip[] sounds;
 
@@ -22,7 +19,7 @@ public class MachineKnob : MonoBehaviour
     void Start()
     {
         state = State.Idle;
-        quarterCounter.text = GameMaster.instance.quarters.ToString();
+        GameMaster.instance.UpdateCoinCounter();
         aSource = GetComponent<AudioSource>();
 
     }
@@ -65,10 +62,9 @@ public class MachineKnob : MonoBehaviour
     {
         if (state == State.Idle && Input.GetMouseButtonDown(0))
         {
-            if (GameMaster.instance.quarters > 0)
+            if (GameMaster.instance.coins > 0)
             {
-                GameMaster.instance.quarters--;
-                quarterCounter.text = GameMaster.instance.quarters.ToString();
+                GameMaster.instance.SubtractCoins(1);
                 state = State.Twisting;
                 float rotateAmt = (Random.Range(0, 20) == 0) ? -6969f : -720f;
                 LeanTween.rotateZ(gameObject, rotateAmt, 1).setEase(LeanTweenType.easeOutCubic).setOnComplete(() =>

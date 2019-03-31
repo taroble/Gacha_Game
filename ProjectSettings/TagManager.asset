@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Text Canvas
   - Fade Canvas
+  - Coin Counter
   layers:
   - Default
   - TransparentFX

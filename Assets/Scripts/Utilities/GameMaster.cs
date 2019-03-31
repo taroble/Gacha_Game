@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameMaster : MonoBehaviour
 {
     public static GameMaster instance;
     TextAsset itemData;
     
-    public int quarters;
+    public int coins;
 
     List<Item> commonItems = new List<Item>();
     List<Item> uncommonItems = new List<Item>();
@@ -29,6 +30,23 @@ public class GameMaster : MonoBehaviour
 
         itemData = Resources.Load<TextAsset>("Item Database");
         PopulateItemsArray();
+    }
+
+    public void AddCoins(int amountOfCoins)
+    {
+        coins += amountOfCoins;
+        UpdateCoinCounter();
+    }
+
+    public void SubtractCoins(int amountOfCoins)
+    {
+        coins -= amountOfCoins;
+        UpdateCoinCounter();
+    }
+
+    public void UpdateCoinCounter()
+    {
+        GameObject.FindGameObjectWithTag("Coin Counter").GetComponent<TextMeshProUGUI>().text = coins.ToString();
     }
 
     //Columns (Left to Right):
