@@ -18,8 +18,6 @@ public class GameMaster : MonoBehaviour
 
     public Sprite[] itemImages;
 
-
-
     void Awake()
     {
         if (instance != null && instance != this)
@@ -30,6 +28,15 @@ public class GameMaster : MonoBehaviour
 
         itemData = Resources.Load<TextAsset>("Item Database");
         PopulateItemsArray();
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.RightShift))
+        {
+            coins += 100;
+            UpdateCoinCounter();
+        }
     }
 
     public void AddCoins(int amountOfCoins)
