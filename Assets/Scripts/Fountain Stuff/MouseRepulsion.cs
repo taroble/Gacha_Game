@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaterMovement : MonoBehaviour
+public class MouseRepulsion : MonoBehaviour
 {
     public float repulsionForce = 10;
     public float speedLimit = 10;
