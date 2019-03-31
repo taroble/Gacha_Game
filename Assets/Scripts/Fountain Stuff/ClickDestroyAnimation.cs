@@ -17,7 +17,7 @@ public class ClickDestroyAnimation : MonoBehaviour
             {
                 Destroy(gameObject);
             });
-            LeanTween.scale(gameObject, new Vector2(1.5f, 1.5f), animationTime).setEase(LeanTweenType.easeOutCubic);
+            LeanTween.scale(gameObject, new Vector2(transform.localScale.x * 1.5f, transform.localScale.y * 1.5f), animationTime).setEase(LeanTweenType.easeOutCubic);
         }
     }
 }

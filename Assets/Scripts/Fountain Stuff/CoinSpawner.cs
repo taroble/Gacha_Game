@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class CoinSpawner : MonoBehaviour
 {
-    public GameObject normalCoin;
-    public GameObject rainbowCoin;
     public GameObject coinHolder;
+
+    public GameObject[] normalCoins;
+    public GameObject[] rareCoins;
+    public GameObject[] ultraRareCoins;
 
     public float minSpawnTimerLength;
     public float maxSpawnTimerLength;
@@ -41,15 +43,26 @@ public class CoinSpawner : MonoBehaviour
             if (coinHolder.transform.childCount < maxNumberOfCoinsOnScreen)
             {
                 Vector2 spawnPosition = spawnPositions[Random.Range(0, spawnPositions.Length)];
+                int d100 = Random.Range(0, 100);
 
-                if (Random.Range(0, 100) < 5)
+                //Ultra rare (1%)
+                if (d100 == 0)
                 {
-                    GameObject rCoin = Instantiate(rainbowCoin, spawnPosition, Quaternion.identity);
+                    GameObject urCoin = Instantiate(ultraRareCoins[Random.Range(0, ultraRareCoins.Length)], spawnPosition, Quaternion.identity);
+                    urCoin.transform.parent = coinHolder.transform;
+                }
+
+                //Rare (5%)
+                else if (d100 > 0 && d100 < 6)
+                {
+                    GameObject rCoin = Instantiate(rareCoins[Random.Range(0, rareCoins.Length)], spawnPosition, Quaternion.identity);
                     rCoin.transform.parent = coinHolder.transform;
                 }
+
+                //Common (94%)
                 else
                 {
-                    GameObject nCoin = Instantiate(normalCoin, spawnPosition, Quaternion.identity);
+                    GameObject nCoin = Instantiate(normalCoins[Random.Range(0, normalCoins.Length)], spawnPosition, Quaternion.identity);
                     nCoin.transform.parent = coinHolder.transform;
                 }
             }

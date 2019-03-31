@@ -1601,14 +1601,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67efd2006b3768749bc52206a0ce3ec5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalCoin: {fileID: 792127022122223155, guid: 64efa42f4aece7d48841138f0331c418,
-    type: 3}
-  rainbowCoin: {fileID: 2564886750009613961, guid: 311a4cead6176a44e82ac30552023944,
-    type: 3}
   coinHolder: {fileID: 2127014551}
+  normalCoins:
+  - {fileID: 792127022122223155, guid: 64efa42f4aece7d48841138f0331c418, type: 3}
+  rareCoins:
+  - {fileID: 5352018887633889879, guid: ed1bc9b15242b794d879c73012c21580, type: 3}
+  - {fileID: 3102885535537918789, guid: 0e4b3b7f064372a459332d2f63622a1d, type: 3}
+  - {fileID: 1877020491226575325, guid: 42cc63e0ffc7cc34f8766ceefd1d6932, type: 3}
+  ultraRareCoins:
+  - {fileID: 2564886750009613961, guid: 311a4cead6176a44e82ac30552023944, type: 3}
   minSpawnTimerLength: 1
   maxSpawnTimerLength: 3
-  maxNumberOfCoinsOnScreen: 5
+  maxNumberOfCoinsOnScreen: 8
 --- !u!4 &1334102437
 Transform:
   m_ObjectHideFlags: 0
@@ -1713,7 +1717,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 1553248928}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 9038045cb50d4a34d81924f4ae0ab1d9, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1793,7 +1797,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 1553248928}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 9038045cb50d4a34d81924f4ae0ab1d9, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
