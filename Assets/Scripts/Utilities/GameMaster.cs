@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class GameMaster : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class GameMaster : MonoBehaviour
     float[] rarityChances = { 45, 30, 16, 9 };
 
     public Sprite[] itemImages;
+
+    public GameObject itemBlock;
+    public Text itemText;
 
     void Awake()
     {
@@ -134,7 +138,76 @@ public class GameMaster : MonoBehaviour
         }
 
         receivedItem.amountOwned++;
-        //print(receivedItem.itemName + ": " + receivedItem.amountOwned);
+        Debug.Log(receivedItem.itemName + ": " + receivedItem.amountOwned);
         return receivedItem;
+    }
+
+    public void GetItemCommon(int ID)
+    {
+        Item getItem;
+
+        for (int i = 0; i < commonItems.Count; i++)
+        {
+            if (commonItems[i].id == ID)
+            {
+                getItem = commonItems[i];
+                printValues(getItem);
+            }
+        }
+    }
+
+    public void GetItemUncommon(int ID)
+    {
+        Item getItem;
+
+        for (int i = 0; i < uncommonItems.Count; i++)
+        {
+            if (uncommonItems[i].id == ID)
+            {
+                getItem = uncommonItems[i];
+                printValues(getItem);
+            }
+        }
+    }
+
+    public void GetItemRare(int ID)
+    {
+        Item getItem;
+
+        for (int i = 0; i < rareItems.Count; i++)
+        {
+            if (rareItems[i].id == ID)
+            {
+                getItem = rareItems[i];
+                printValues(getItem);
+            }
+        }
+    }
+
+    public void GetItemUltraRare(int ID)
+    {
+        Item getItem;
+
+        for (int i = 0; i < ultraRareItems.Count; i++)
+        {
+            if (ultraRareItems[i].id == ID)
+            {
+                getItem = ultraRareItems[i];
+                printValues(getItem);
+            }
+        }
+    }
+
+
+    void printValues(Item getItem)
+    {
+        itemBlock.SetActive(true);
+        itemText.text = getItem.itemName + ": " + getItem.amountOwned + "\nFlavor Text: " + getItem.flavorText;
+              Debug.Log(getItem.itemName + ": " + getItem.amountOwned + "\nFlavor Text: " + getItem.flavorText);
+
+        if (Input.GetMouseButton(0))
+        {
+            itemBlock.SetActive(false);
+        }
     }
 }
