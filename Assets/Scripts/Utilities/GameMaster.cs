@@ -137,7 +137,7 @@ public class GameMaster : MonoBehaviour
         }
 
         receivedItem.amountOwned++;
-        Debug.Log(receivedItem.itemName + ": " + receivedItem.amountOwned);
+        //Debug.Log(receivedItem.itemName + ": " + receivedItem.amountOwned);
         return receivedItem;
     }
 
