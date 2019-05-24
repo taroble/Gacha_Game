@@ -52,14 +52,14 @@ public class CoinSpawner : MonoBehaviour
                     urCoin.transform.parent = coinHolder.transform;
                 }
 
-                //Rare (5%)
-                else if (d100 > 0 && d100 < 6)
+                //Rare (10%)
+                else if (d100 > 0 && d100 < 10)
                 {
                     GameObject rCoin = Instantiate(rareCoins[Random.Range(0, rareCoins.Length)], spawnPosition, Quaternion.identity);
                     rCoin.transform.parent = coinHolder.transform;
                 }
 
-                //Common (94%)
+                //Common (89%)
                 else
                 {
                     GameObject nCoin = Instantiate(normalCoins[Random.Range(0, normalCoins.Length)], spawnPosition, Quaternion.identity);
