@@ -19,8 +19,7 @@ public class GameMaster : MonoBehaviour
 
     public Sprite[] itemImages;
 
-    public GameObject itemBlock;
-    public Text itemText;
+
 
     void Awake()
     {
@@ -142,72 +141,55 @@ public class GameMaster : MonoBehaviour
         return receivedItem;
     }
 
-    public void GetItemCommon(int ID)
+    public Item GetItemCommon(int ID)
     {
-        Item getItem;
-
         for (int i = 0; i < commonItems.Count; i++)
         {
             if (commonItems[i].id == ID)
             {
-                getItem = commonItems[i];
-                printValues(getItem);
+                return commonItems[i];
             }
         }
+
+        return null;
     }
 
-    public void GetItemUncommon(int ID)
+    public Item GetItemUncommon(int ID)
     {
-        Item getItem;
-
         for (int i = 0; i < uncommonItems.Count; i++)
         {
             if (uncommonItems[i].id == ID)
             {
-                getItem = uncommonItems[i];
-                printValues(getItem);
+                return uncommonItems[i];
             }
         }
+
+        return null;
     }
 
-    public void GetItemRare(int ID)
+    public Item GetItemRare(int ID)
     {
-        Item getItem;
-
         for (int i = 0; i < rareItems.Count; i++)
         {
             if (rareItems[i].id == ID)
             {
-                getItem = rareItems[i];
-                printValues(getItem);
+                return rareItems[i];
             }
         }
+
+        return null;
     }
 
-    public void GetItemUltraRare(int ID)
+    public Item GetItemUltraRare(int ID)
     {
-        Item getItem;
-
         for (int i = 0; i < ultraRareItems.Count; i++)
         {
             if (ultraRareItems[i].id == ID)
             {
-                getItem = ultraRareItems[i];
-                printValues(getItem);
+                return ultraRareItems[i];
             }
         }
-    }
 
-
-    void printValues(Item getItem)
-    {
-        itemBlock.SetActive(true);
-        itemText.text = getItem.itemName + ": " + getItem.amountOwned + "\nFlavor Text: " + getItem.flavorText;
-              Debug.Log(getItem.itemName + ": " + getItem.amountOwned + "\nFlavor Text: " + getItem.flavorText);
-
-        if (Input.GetMouseButton(0))
-        {
-            itemBlock.SetActive(false);
-        }
+        return null;
     }
 }
