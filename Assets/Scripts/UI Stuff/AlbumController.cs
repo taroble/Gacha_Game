@@ -59,8 +59,8 @@ public class AlbumController : MonoBehaviour
     void PrintValues(Item getItem)
     {
         itemBlock.SetActive(true);
-        itemText.text = getItem.itemName + ": " + getItem.amountOwned + "\nFlavor Text: " + getItem.flavorText;
-        Debug.Log(getItem.itemName + ": " + getItem.amountOwned + "\nFlavor Text: " + getItem.flavorText);
+        itemText.text = getItem.itemName + ": " + getItem.amountOwned + "\n" + getItem.flavorText;
+        //Debug.Log(getItem.itemName + ": " + getItem.amountOwned + "\n" + getItem.flavorText);
 
         if (Input.GetMouseButton(0))
         {
