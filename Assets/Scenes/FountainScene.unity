@@ -269,8 +269,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -430,8 +430,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1343,7 +1343,7 @@ Canvas:
   m_GameObject: {fileID: 1063745900}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 848226819}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -2404,6 +2404,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 557679372744b0f42959bdf36104cea0, type: 3}
   - {fileID: 21300000, guid: f63a69691d7e37547ab9fc6f324c201e, type: 3}
   - {fileID: 21300000, guid: 0ef09c1ca5225214b8f54dc463055e05, type: 3}
+  itemBlock: {fileID: 0}
+  itemText: {fileID: 0}
 --- !u!1 &7920775909616763396
 GameObject:
   m_ObjectHideFlags: 0

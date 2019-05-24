@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class GameMaster : MonoBehaviour
 {
@@ -30,6 +31,15 @@ public class GameMaster : MonoBehaviour
 
         itemData = Resources.Load<TextAsset>("Item Database");
         PopulateItemsArray();
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.RightShift))
+        {
+            coins += 100;
+            UpdateCoinCounter();
+        }
     }
 
     public void AddCoins(int amountOfCoins)
@@ -127,7 +137,59 @@ public class GameMaster : MonoBehaviour
         }
 
         receivedItem.amountOwned++;
-        //print(receivedItem.itemName + ": " + receivedItem.amountOwned);
+        Debug.Log(receivedItem.itemName + ": " + receivedItem.amountOwned);
         return receivedItem;
+    }
+
+    public Item GetItemCommon(int ID)
+    {
+        for (int i = 0; i < commonItems.Count; i++)
+        {
+            if (commonItems[i].id == ID)
+            {
+                return commonItems[i];
+            }
+        }
+
+        return null;
+    }
+
+    public Item GetItemUncommon(int ID)
+    {
+        for (int i = 0; i < uncommonItems.Count; i++)
+        {
+            if (uncommonItems[i].id == ID)
+            {
+                return uncommonItems[i];
+            }
+        }
+
+        return null;
+    }
+
+    public Item GetItemRare(int ID)
+    {
+        for (int i = 0; i < rareItems.Count; i++)
+        {
+            if (rareItems[i].id == ID)
+            {
+                return rareItems[i];
+            }
+        }
+
+        return null;
+    }
+
+    public Item GetItemUltraRare(int ID)
+    {
+        for (int i = 0; i < ultraRareItems.Count; i++)
+        {
+            if (ultraRareItems[i].id == ID)
+            {
+                return ultraRareItems[i];
+            }
+        }
+
+        return null;
     }
 }

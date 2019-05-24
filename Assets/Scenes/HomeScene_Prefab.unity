@@ -227,7 +227,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
+      - m_Target: {fileID: 128256612}
         m_MethodName: GetItemUncommon
         m_Mode: 3
         m_Arguments:
@@ -382,6 +382,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 557679372744b0f42959bdf36104cea0, type: 3}
   - {fileID: 21300000, guid: f63a69691d7e37547ab9fc6f324c201e, type: 3}
   - {fileID: 21300000, guid: 0ef09c1ca5225214b8f54dc463055e05, type: 3}
+  itemBlock: {fileID: 674384719}
+  itemText: {fileID: 468545660}
 --- !u!4 &128256613
 Transform:
   m_ObjectHideFlags: 0
@@ -586,7 +588,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
+      - m_Target: {fileID: 128256612}
         m_MethodName: GetItemUncommon
         m_Mode: 3
         m_Arguments:
@@ -657,7 +659,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 1ed4ce3f1623c3b458ba542dc9f4ca55, type: 3}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
@@ -943,7 +945,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
+      - m_Target: {fileID: 128256612}
         m_MethodName: GetItemCommon
         m_Mode: 3
         m_Arguments:
@@ -1222,7 +1224,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574436}
+      - m_Target: {fileID: 0}
         m_MethodName: TurnOff
         m_Mode: 1
         m_Arguments:
@@ -1596,7 +1598,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
+      - m_Target: {fileID: 128256612}
         m_MethodName: GetItemUltraRare
         m_Mode: 3
         m_Arguments:
@@ -2378,7 +2380,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
+      - m_Target: {fileID: 128256612}
         m_MethodName: GetItemCommon
         m_Mode: 3
         m_Arguments:
@@ -2581,7 +2583,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
+      - m_Target: {fileID: 128256612}
         m_MethodName: GetItemRare
         m_Mode: 3
         m_Arguments:
@@ -2907,7 +2909,6 @@ GameObject:
   - component: {fileID: 2077574431}
   - component: {fileID: 2077574434}
   - component: {fileID: 2077574435}
-  - component: {fileID: 2077574436}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -2994,21 +2995,6 @@ MonoBehaviour:
   - {fileID: 6082188017596002415}
   - {fileID: 6082188016655552361}
   - {fileID: 6082188017505872679}
-  itemBlock: {fileID: 674384719}
-  itemText: {fileID: 468545660}
---- !u!114 &2077574436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2077574430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d73d0410878ab764a951721e8f1871b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  menu: {fileID: 674384719}
 --- !u!1 &6082188015651173105
 GameObject:
   m_ObjectHideFlags: 0
@@ -3068,7 +3054,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
+      - m_Target: {fileID: 128256612}
         m_MethodName: GetItemCommon
         m_Mode: 3
         m_Arguments:
@@ -3252,7 +3238,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
+      - m_Target: {fileID: 128256612}
         m_MethodName: GetItemCommon
         m_Mode: 3
         m_Arguments:
@@ -3372,7 +3358,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
+      - m_Target: {fileID: 128256612}
         m_MethodName: GetItemRare
         m_Mode: 3
         m_Arguments:
@@ -3471,7 +3457,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
+      - m_Target: {fileID: 128256612}
         m_MethodName: GetItemUncommon
         m_Mode: 3
         m_Arguments:
@@ -3636,7 +3622,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
+      - m_Target: {fileID: 128256612}
         m_MethodName: GetItemUncommon
         m_Mode: 3
         m_Arguments:
@@ -3837,7 +3823,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
+      - m_Target: {fileID: 128256612}
         m_MethodName: GetItemCommon
         m_Mode: 3
         m_Arguments:
@@ -4021,7 +4007,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
+      - m_Target: {fileID: 128256612}
         m_MethodName: GetItemRare
         m_Mode: 3
         m_Arguments:
@@ -4149,7 +4135,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
+      - m_Target: {fileID: 128256612}
         m_MethodName: GetItemCommon
         m_Mode: 3
         m_Arguments:
@@ -4277,7 +4263,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
+      - m_Target: {fileID: 128256612}
         m_MethodName: GetItemRare
         m_Mode: 3
         m_Arguments:
@@ -4631,7 +4617,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
+      - m_Target: {fileID: 128256612}
         m_MethodName: GetItemCommon
         m_Mode: 3
         m_Arguments:
@@ -4832,7 +4818,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
+      - m_Target: {fileID: 128256612}
         m_MethodName: GetItemUltraRare
         m_Mode: 3
         m_Arguments:
@@ -5008,7 +4994,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
+      - m_Target: {fileID: 128256612}
         m_MethodName: GetItemCommon
         m_Mode: 3
         m_Arguments:
@@ -5215,7 +5201,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
+      - m_Target: {fileID: 128256612}
         m_MethodName: GetItemCommon
         m_Mode: 3
         m_Arguments:
@@ -5370,7 +5356,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
+      - m_Target: {fileID: 128256612}
         m_MethodName: GetItemRare
         m_Mode: 3
         m_Arguments:
@@ -5827,7 +5813,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
+      - m_Target: {fileID: 128256612}
         m_MethodName: GetItemUltraRare
         m_Mode: 3
         m_Arguments:
@@ -6015,7 +6001,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
+      - m_Target: {fileID: 128256612}
         m_MethodName: GetItemUltraRare
         m_Mode: 3
         m_Arguments:
@@ -6316,7 +6302,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
+      - m_Target: {fileID: 128256612}
         m_MethodName: GetItemUncommon
         m_Mode: 3
         m_Arguments:
@@ -6444,7 +6430,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
+      - m_Target: {fileID: 128256612}
         m_MethodName: GetItemUncommon
         m_Mode: 3
         m_Arguments:
@@ -6959,7 +6945,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
+      - m_Target: {fileID: 128256612}
         m_MethodName: GetItemUltraRare
         m_Mode: 3
         m_Arguments:
@@ -7139,7 +7125,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
+      - m_Target: {fileID: 128256612}
         m_MethodName: GetItemUncommon
         m_Mode: 3
         m_Arguments:
@@ -7248,7 +7234,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
+      - m_Target: {fileID: 128256612}
         m_MethodName: GetItemUltraRare
         m_Mode: 3
         m_Arguments:
@@ -7553,7 +7539,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
+      - m_Target: {fileID: 128256612}
         m_MethodName: GetItemRare
         m_Mode: 3
         m_Arguments:
@@ -7718,7 +7704,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
+      - m_Target: {fileID: 128256612}
         m_MethodName: GetItemUltraRare
         m_Mode: 3
         m_Arguments:
@@ -8225,7 +8211,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
+      - m_Target: {fileID: 128256612}
         m_MethodName: GetItemUltraRare
         m_Mode: 3
         m_Arguments:
@@ -8957,7 +8943,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
+      - m_Target: {fileID: 128256612}
         m_MethodName: GetItemUncommon
         m_Mode: 3
         m_Arguments:
@@ -9482,7 +9468,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
+      - m_Target: {fileID: 128256612}
         m_MethodName: GetItemUncommon
         m_Mode: 3
         m_Arguments:
@@ -9978,7 +9964,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
+      - m_Target: {fileID: 128256612}
         m_MethodName: GetItemRare
         m_Mode: 3
         m_Arguments:
@@ -10305,7 +10291,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
+      - m_Target: {fileID: 128256612}
         m_MethodName: GetItemRare
         m_Mode: 3
         m_Arguments:
@@ -10433,7 +10419,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
+      - m_Target: {fileID: 128256612}
         m_MethodName: GetItemUncommon
         m_Mode: 3
         m_Arguments:
@@ -10561,7 +10547,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
+      - m_Target: {fileID: 128256612}
         m_MethodName: GetItemCommon
         m_Mode: 3
         m_Arguments:
