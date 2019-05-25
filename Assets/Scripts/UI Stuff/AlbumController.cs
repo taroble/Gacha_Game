@@ -9,8 +9,6 @@ public class AlbumController : MonoBehaviour
     public GameObject itemBlock;
     public Text itemText;
 
-
-
     public void openPage(int page)
 	{
 		for (int i = 0; i < pages.Length; i++)

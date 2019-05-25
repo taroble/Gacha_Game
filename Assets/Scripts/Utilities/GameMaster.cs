@@ -141,6 +141,31 @@ public class GameMaster : MonoBehaviour
         return receivedItem;
     }
 
+    public Item GetItem(int ID)
+    {
+        for (int i = 0; i < 36; ++i)
+        {
+            if (commonItems[i].id == ID)
+            {
+                return commonItems[i];
+            }
+            else if (uncommonItems[i].id == ID)
+            {
+                return uncommonItems[i];
+            }
+            else if (rareItems[i].id == ID)
+            {
+                return rareItems[i];
+            }
+            else if (ultraRareItems[i].id == ID)
+            {
+                return ultraRareItems[i];
+            }
+        }
+
+        return null;
+    }
+
     public Item GetItemCommon(int ID)
     {
         for (int i = 0; i < commonItems.Count; i++)
