@@ -143,7 +143,7 @@ public class GameMaster : MonoBehaviour
 
     public Item GetItem(int ID)
     {
-        for (int i = 0; i < 36; ++i)
+        for (int i = 0; i < 36; i++)
         {
             if (commonItems[i].id == ID)
             {
