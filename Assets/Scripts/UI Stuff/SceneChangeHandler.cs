@@ -24,4 +24,14 @@ public class SceneChangeHandler : MonoBehaviour
     {
         SceneManager.LoadScene("MachineScene");
     }
+
+    public void LoadMenuScene()
+    {
+        SceneManager.LoadScene("MenuScene");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }

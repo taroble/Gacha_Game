@@ -61,10 +61,5 @@ public class AlbumController : MonoBehaviour
         itemBlock.SetActive(true);
         itemText.text = getItem.itemName + ": " + getItem.amountOwned + "\n" + getItem.flavorText;
         //Debug.Log(getItem.itemName + ": " + getItem.amountOwned + "\n" + getItem.flavorText);
-
-        if (Input.GetMouseButton(0))
-        {
-            itemBlock.SetActive(false);
-        }
     }
 }
