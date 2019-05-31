@@ -62,7 +62,7 @@ public class MachineKnob : MonoBehaviour
     {
         if (state == State.Idle && Input.GetMouseButtonDown(0))
         {
-            if (GameMaster.instance.coins > 0)
+            if (GameMaster.instance.GetCoinAmount() > 0)
             {
                 GameMaster.instance.SubtractCoins(1);
                 state = State.Twisting;

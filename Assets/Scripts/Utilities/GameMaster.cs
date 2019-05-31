@@ -8,8 +8,6 @@ public class GameMaster : MonoBehaviour
 {
     public static GameMaster instance;
     TextAsset itemData;
-    
-    public int coins;
 
     List<Item> commonItems = new List<Item>();
     List<Item> uncommonItems = new List<Item>();
@@ -18,6 +16,8 @@ public class GameMaster : MonoBehaviour
     float[] rarityChances = { 45, 30, 16, 9 };
 
     public Sprite[] itemImages;
+
+    int coins;
 
 
 
@@ -42,6 +42,13 @@ public class GameMaster : MonoBehaviour
         }
     }
 
+
+
+    public int GetCoinAmount()
+    {
+        return coins;
+    }
+
     public void AddCoins(int amountOfCoins)
     {
         coins += amountOfCoins;
@@ -58,6 +65,8 @@ public class GameMaster : MonoBehaviour
     {
         GameObject.FindGameObjectWithTag("Coin Counter").GetComponent<TextMeshProUGUI>().text = coins.ToString();
     }
+
+
 
     //Columns (Left to Right):
     //0 = ID
@@ -105,6 +114,8 @@ public class GameMaster : MonoBehaviour
         }
     }
 
+
+
     public Item GrabRandomItem()
     {
         Item receivedItem;
@@ -139,31 +150,6 @@ public class GameMaster : MonoBehaviour
         receivedItem.amountOwned++;
         //Debug.Log(receivedItem.itemName + ": " + receivedItem.amountOwned);
         return receivedItem;
-    }
-
-    public Item GetItem(int ID)
-    {
-        for (int i = 0; i < 36; i++)
-        {
-            if (commonItems[i].id == ID)
-            {
-                return commonItems[i];
-            }
-            else if (uncommonItems[i].id == ID)
-            {
-                return uncommonItems[i];
-            }
-            else if (rareItems[i].id == ID)
-            {
-                return rareItems[i];
-            }
-            else if (ultraRareItems[i].id == ID)
-            {
-                return ultraRareItems[i];
-            }
-        }
-
-        return null;
     }
 
     public Item GetItemCommon(int ID)
