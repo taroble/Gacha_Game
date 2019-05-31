@@ -1163,6 +1163,7 @@ GameObject:
   - component: {fileID: 674384722}
   - component: {fileID: 674384721}
   - component: {fileID: 674384723}
+  - component: {fileID: 674384724}
   m_Layer: 5
   m_Name: Description
   m_TagString: Untagged
@@ -1267,7 +1268,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574436}
+      - m_Target: {fileID: 674384724}
         m_MethodName: TurnOff
         m_Mode: 1
         m_Arguments:
@@ -1280,6 +1281,18 @@ MonoBehaviour:
         m_CallState: 1
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &674384724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674384719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d73d0410878ab764a951721e8f1871b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &752299503
 GameObject:
   m_ObjectHideFlags: 0
@@ -2834,86 +2847,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1971277444}
   m_CullTransparentMesh: 0
---- !u!1 &2046648369
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2046648371}
-  - component: {fileID: 2046648370}
-  m_Layer: 0
-  m_Name: Button Disabler
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &2046648370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2046648369}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 163bf40d0fb54cc47ba1e21739a34864, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttons:
-  - {fileID: 6082188015686287890}
-  - {fileID: 6082188015651173106}
-  - {fileID: 6082188015674828366}
-  - {fileID: 6082188016519018938}
-  - {fileID: 6082188016165108230}
-  - {fileID: 6082188016349474182}
-  - {fileID: 6082188015892443486}
-  - {fileID: 6082188015658363198}
-  - {fileID: 6082188017404201630}
-  - {fileID: 6082188017723744130}
-  - {fileID: 6082188016774731474}
-  - {fileID: 6082188015708121756}
-  - {fileID: 6082188016782480124}
-  - {fileID: 6082188016117777876}
-  - {fileID: 6082188015936798316}
-  - {fileID: 6082188017484290400}
-  - {fileID: 6082188016658631202}
-  - {fileID: 6082188017683717974}
-  - {fileID: 6082188015802535048}
-  - {fileID: 6082188015926436314}
-  - {fileID: 6082188015748442644}
-  - {fileID: 6082188017757475174}
-  - {fileID: 6082188016406279686}
-  - {fileID: 6082188015677356798}
-  - {fileID: 6082188017606829316}
-  - {fileID: 6082188015672707960}
-  - {fileID: 6082188016660091734}
-  - {fileID: 1443481513}
-  - {fileID: 551664311}
-  - {fileID: 11926971}
-  - {fileID: 305117628}
-  - {fileID: 1582599636}
-  - {fileID: 940314422}
-  - {fileID: 6082188017015254232}
-  - {fileID: 6082188016291356190}
-  - {fileID: 6082188016641921108}
---- !u!4 &2046648371
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2046648369}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2063906665
 GameObject:
   m_ObjectHideFlags: 0
@@ -3077,7 +3010,6 @@ GameObject:
   - component: {fileID: 2077574431}
   - component: {fileID: 2077574434}
   - component: {fileID: 2077574435}
-  - component: {fileID: 2077574436}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -3166,19 +3098,6 @@ MonoBehaviour:
   - {fileID: 6082188017505872679}
   itemBlock: {fileID: 674384719}
   itemText: {fileID: 468545660}
---- !u!114 &2077574436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2077574430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d73d0410878ab764a951721e8f1871b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  menu: {fileID: 674384719}
 --- !u!1 &6082188015651173105
 GameObject:
   m_ObjectHideFlags: 0
