@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
 
 public class GameMaster : MonoBehaviour
 {
@@ -14,6 +13,8 @@ public class GameMaster : MonoBehaviour
     List<Item> rareItems = new List<Item>();
     List<Item> ultraRareItems = new List<Item>();
     float[] rarityChances = { 45, 30, 16, 9 };
+
+    Dictionary<int, Item> items = new Dictionary<int, Item>();
 
     public Sprite[] itemImages;
 
@@ -30,7 +31,7 @@ public class GameMaster : MonoBehaviour
         DontDestroyOnLoad(this);
 
         itemData = Resources.Load<TextAsset>("Item Database");
-        PopulateItemsArray();
+        PopulateAllDataStructures();
     }
 
     void Update()
@@ -44,30 +45,6 @@ public class GameMaster : MonoBehaviour
 
 
 
-    public int GetCoinAmount()
-    {
-        return coins;
-    }
-
-    public void AddCoins(int amountOfCoins)
-    {
-        coins += amountOfCoins;
-        UpdateCoinCounter();
-    }
-
-    public void SubtractCoins(int amountOfCoins)
-    {
-        coins -= amountOfCoins;
-        UpdateCoinCounter();
-    }
-
-    public void UpdateCoinCounter()
-    {
-        GameObject.FindGameObjectWithTag("Coin Counter").GetComponent<TextMeshProUGUI>().text = coins.ToString();
-    }
-
-
-
     //Columns (Left to Right):
     //0 = ID
     //1 = ITEM NAME
@@ -75,7 +52,7 @@ public class GameMaster : MonoBehaviour
     //3 = RARITY
     //4 = FLAVOR TEXT
     //5 = AMOUNT OWNED
-    public void PopulateItemsArray()
+    public void PopulateAllDataStructures()
     {
         string[] data = itemData.text.Split(new char[] { '\n' });
 
@@ -111,7 +88,33 @@ public class GameMaster : MonoBehaviour
             newItem.flavorText = row[4];
             int.TryParse(row[5], out newItem.amountOwned);
             newItem.image = itemImages[i - 1];
+
+            items.Add(newItem.id, newItem);
         }
+    }
+
+
+
+    public int GetCoinAmount()
+    {
+        return coins;
+    }
+
+    public void AddCoins(int amountOfCoins)
+    {
+        coins += amountOfCoins;
+        UpdateCoinCounter();
+    }
+
+    public void SubtractCoins(int amountOfCoins)
+    {
+        coins -= amountOfCoins;
+        UpdateCoinCounter();
+    }
+
+    public void UpdateCoinCounter()
+    {
+        GameObject.FindGameObjectWithTag("Coin Counter").GetComponent<TextMeshProUGUI>().text = coins.ToString();
     }
 
 
@@ -128,23 +131,23 @@ public class GameMaster : MonoBehaviour
         float randNum = Random.Range(0f, 100f);
         if (randNum <= commonWeight && randNum > uncommonWeight)        //If 100 > randNum > 55
         {
-            receivedItem = commonItems[Random.Range(0, commonItems.Count - 1)];
+            receivedItem = commonItems[Random.Range(0, commonItems.Count)];
         }
         else if (randNum <= uncommonWeight && randNum > rareWeight)     //If 55 > randNum > 25
         {
-            receivedItem = uncommonItems[Random.Range(0, uncommonItems.Count - 1)];
+            receivedItem = uncommonItems[Random.Range(0, uncommonItems.Count)];
         }
         else if (randNum <= rareWeight && randNum > ultraRareWeight)    //If 25 > randNum > 9
         {
-            receivedItem = rareItems[Random.Range(0, rareItems.Count - 1)];
+            receivedItem = rareItems[Random.Range(0, rareItems.Count)];
         }
         else if (randNum <= ultraRareWeight && randNum > 0.001f)        //If 9 > randNum > 0
         {
-            receivedItem = ultraRareItems[Random.Range(0, ultraRareItems.Count - 1)];
+            receivedItem = ultraRareItems[Random.Range(0, ultraRareItems.Count)];
         }
         else
         {
-            receivedItem = commonItems[Random.Range(0, commonItems.Count - 1)];
+            receivedItem = commonItems[Random.Range(0, commonItems.Count)];
         }
 
         receivedItem.amountOwned++;
@@ -152,53 +155,12 @@ public class GameMaster : MonoBehaviour
         return receivedItem;
     }
 
-    public Item GetItemCommon(int ID)
+    public Item GetItem(int itemID)
     {
-        for (int i = 0; i < commonItems.Count; i++)
+        Item temp = null;
+        if (items.TryGetValue(itemID, out temp))
         {
-            if (commonItems[i].id == ID)
-            {
-                return commonItems[i];
-            }
-        }
-
-        return null;
-    }
-
-    public Item GetItemUncommon(int ID)
-    {
-        for (int i = 0; i < uncommonItems.Count; i++)
-        {
-            if (uncommonItems[i].id == ID)
-            {
-                return uncommonItems[i];
-            }
-        }
-
-        return null;
-    }
-
-    public Item GetItemRare(int ID)
-    {
-        for (int i = 0; i < rareItems.Count; i++)
-        {
-            if (rareItems[i].id == ID)
-            {
-                return rareItems[i];
-            }
-        }
-
-        return null;
-    }
-
-    public Item GetItemUltraRare(int ID)
-    {
-        for (int i = 0; i < ultraRareItems.Count; i++)
-        {
-            if (ultraRareItems[i].id == ID)
-            {
-                return ultraRareItems[i];
-            }
+            return items[itemID];
         }
 
         return null;

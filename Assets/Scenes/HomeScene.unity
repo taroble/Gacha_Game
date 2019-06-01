@@ -122,11 +122,11 @@ GameObject:
   m_Component:
   - component: {fileID: 11926968}
   - component: {fileID: 11926970}
+  - component: {fileID: 11926972}
   - component: {fileID: 11926969}
   - component: {fileID: 11926971}
-  - component: {fileID: 11926972}
   m_Layer: 5
-  m_Name: Pink
+  m_Name: Pink Sticky Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -228,9 +228,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
-        m_MethodName: GetItemUncommon
-        m_Mode: 3
+      - m_Target: {fileID: 11926972}
+        m_MethodName: DisplayItem
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -250,11 +250,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 11926967}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 215cf41841f66974daa52b6af8d7fb4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 163bf40d0fb54cc47ba1e21739a34864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: 1
   itemID: 29
+  descriptionOverlay: {fileID: 674384719}
+  descriptionText: {fileID: 468545660}
 --- !u!1 &51804704
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,7 +360,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdb01b87e300d934eaa24a0da3c7d06c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coins: 0
   itemImages:
   - {fileID: 21300000, guid: 765225cd553512648a3291aaf991a9f9, type: 3}
   - {fileID: 21300000, guid: 94780320884f9234991354f7f78a4f96, type: 3}
@@ -496,11 +496,11 @@ GameObject:
   m_Component:
   - component: {fileID: 305117625}
   - component: {fileID: 305117627}
+  - component: {fileID: 305117629}
   - component: {fileID: 305117626}
   - component: {fileID: 305117628}
-  - component: {fileID: 305117629}
   m_Layer: 5
-  m_Name: Purple
+  m_Name: Purple Sticky Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -602,9 +602,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
-        m_MethodName: GetItemUncommon
-        m_Mode: 3
+      - m_Target: {fileID: 305117629}
+        m_MethodName: DisplayItem
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -624,11 +624,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 305117624}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 215cf41841f66974daa52b6af8d7fb4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 163bf40d0fb54cc47ba1e21739a34864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: 1
   itemID: 30
+  descriptionOverlay: {fileID: 674384719}
+  descriptionText: {fileID: 468545660}
 --- !u!1 &468545658
 GameObject:
   m_ObjectHideFlags: 0
@@ -868,11 +869,11 @@ GameObject:
   m_Component:
   - component: {fileID: 551664308}
   - component: {fileID: 551664310}
+  - component: {fileID: 551664312}
   - component: {fileID: 551664309}
   - component: {fileID: 551664311}
-  - component: {fileID: 551664312}
   m_Layer: 5
-  m_Name: Red
+  m_Name: Red Sticky Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -974,9 +975,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
-        m_MethodName: GetItemCommon
-        m_Mode: 3
+      - m_Target: {fileID: 551664312}
+        m_MethodName: DisplayItem
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -996,11 +997,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 551664307}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 215cf41841f66974daa52b6af8d7fb4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 163bf40d0fb54cc47ba1e21739a34864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: 0
   itemID: 28
+  descriptionOverlay: {fileID: 674384719}
+  descriptionText: {fileID: 468545660}
 --- !u!1 &601765162
 GameObject:
   m_ObjectHideFlags: 0
@@ -1549,11 +1551,11 @@ GameObject:
   m_Component:
   - component: {fileID: 940314419}
   - component: {fileID: 940314421}
+  - component: {fileID: 940314423}
   - component: {fileID: 940314420}
   - component: {fileID: 940314422}
-  - component: {fileID: 940314423}
   m_Layer: 5
-  m_Name: Real
+  m_Name: A Real Hand?
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1655,9 +1657,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
-        m_MethodName: GetItemUltraRare
-        m_Mode: 3
+      - m_Target: {fileID: 940314423}
+        m_MethodName: DisplayItem
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1677,11 +1679,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 940314418}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 215cf41841f66974daa52b6af8d7fb4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 163bf40d0fb54cc47ba1e21739a34864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: 3
   itemID: 32
+  descriptionOverlay: {fileID: 674384719}
+  descriptionText: {fileID: 468545660}
 --- !u!1 &947776935
 GameObject:
   m_ObjectHideFlags: 0
@@ -2346,11 +2349,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1443481510}
   - component: {fileID: 1443481512}
+  - component: {fileID: 1443481514}
   - component: {fileID: 1443481511}
   - component: {fileID: 1443481513}
-  - component: {fileID: 1443481514}
   m_Layer: 5
-  m_Name: Blue
+  m_Name: Blue Sticky Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2452,9 +2455,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
-        m_MethodName: GetItemCommon
-        m_Mode: 3
+      - m_Target: {fileID: 1443481514}
+        m_MethodName: DisplayItem
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2474,11 +2477,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1443481509}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 215cf41841f66974daa52b6af8d7fb4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 163bf40d0fb54cc47ba1e21739a34864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: 0
   itemID: 27
+  descriptionOverlay: {fileID: 674384719}
+  descriptionText: {fileID: 468545660}
 --- !u!1 &1541705184
 GameObject:
   m_ObjectHideFlags: 0
@@ -2564,11 +2568,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1582599633}
   - component: {fileID: 1582599635}
+  - component: {fileID: 1582599637}
   - component: {fileID: 1582599634}
   - component: {fileID: 1582599636}
-  - component: {fileID: 1582599637}
   m_Layer: 5
-  m_Name: Rainbow
+  m_Name: Rainbow Sticky Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2670,9 +2674,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
-        m_MethodName: GetItemRare
-        m_Mode: 3
+      - m_Target: {fileID: 1582599637}
+        m_MethodName: DisplayItem
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2692,11 +2696,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1582599632}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 215cf41841f66974daa52b6af8d7fb4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 163bf40d0fb54cc47ba1e21739a34864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: 2
   itemID: 31
+  descriptionOverlay: {fileID: 674384719}
+  descriptionText: {fileID: 468545660}
 --- !u!1 &1644459808
 GameObject:
   m_ObjectHideFlags: 0
@@ -3096,8 +3101,6 @@ MonoBehaviour:
   - {fileID: 6082188017596002415}
   - {fileID: 6082188016655552361}
   - {fileID: 6082188017505872679}
-  itemBlock: {fileID: 674384719}
-  itemText: {fileID: 468545660}
 --- !u!1 &6082188015651173105
 GameObject:
   m_ObjectHideFlags: 0
@@ -3108,11 +3111,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6082188015651173110}
   - component: {fileID: 6082188015651173108}
+  - component: {fileID: 6082188015651173107}
   - component: {fileID: 6082188015651173111}
   - component: {fileID: 6082188015651173106}
-  - component: {fileID: 6082188015651173107}
   m_Layer: 5
-  m_Name: Green Alien 2
+  m_Name: Green Waving Alien
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3158,9 +3161,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
-        m_MethodName: GetItemCommon
-        m_Mode: 3
+      - m_Target: {fileID: 6082188015651173107}
+        m_MethodName: DisplayItem
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3180,11 +3183,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6082188015651173105}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 215cf41841f66974daa52b6af8d7fb4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 163bf40d0fb54cc47ba1e21739a34864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: 0
   itemID: 1
+  descriptionOverlay: {fileID: 674384719}
+  descriptionText: {fileID: 468545660}
 --- !u!222 &6082188015651173108
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3307,9 +3311,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6082188015658363138}
   - component: {fileID: 6082188015658363136}
+  - component: {fileID: 6082188015658363199}
   - component: {fileID: 6082188015658363139}
   - component: {fileID: 6082188015658363198}
-  - component: {fileID: 6082188015658363199}
   m_Layer: 5
   m_Name: Cat
   m_TagString: Untagged
@@ -3357,9 +3361,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
-        m_MethodName: GetItemCommon
-        m_Mode: 3
+      - m_Target: {fileID: 6082188015658363199}
+        m_MethodName: DisplayItem
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3379,11 +3383,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6082188015658363197}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 215cf41841f66974daa52b6af8d7fb4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 163bf40d0fb54cc47ba1e21739a34864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: 0
   itemID: 7
+  descriptionOverlay: {fileID: 674384719}
+  descriptionText: {fileID: 468545660}
 --- !u!224 &6082188015672707956
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3442,11 +3447,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6082188015672707956}
   - component: {fileID: 6082188015672707962}
+  - component: {fileID: 6082188015672707961}
   - component: {fileID: 6082188015672707957}
   - component: {fileID: 6082188015672707960}
-  - component: {fileID: 6082188015672707961}
   m_Layer: 5
-  m_Name: Rainbow
+  m_Name: Rainbow Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3492,9 +3497,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
-        m_MethodName: GetItemRare
-        m_Mode: 3
+      - m_Target: {fileID: 6082188015672707961}
+        m_MethodName: DisplayItem
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3514,11 +3519,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6082188015672707959}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 215cf41841f66974daa52b6af8d7fb4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 163bf40d0fb54cc47ba1e21739a34864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: 2
   itemID: 25
+  descriptionOverlay: {fileID: 674384719}
+  descriptionText: {fileID: 468545660}
 --- !u!222 &6082188015672707962
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3537,11 +3543,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6082188015674828365}
   - component: {fileID: 6082188015674828371}
+  - component: {fileID: 6082188015674828367}
   - component: {fileID: 6082188015674828370}
   - component: {fileID: 6082188015674828366}
-  - component: {fileID: 6082188015674828367}
   m_Layer: 5
-  m_Name: Red Alien
+  m_Name: Red UFO Head Alien
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3606,9 +3612,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
-        m_MethodName: GetItemUncommon
-        m_Mode: 3
+      - m_Target: {fileID: 6082188015674828367}
+        m_MethodName: DisplayItem
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3628,11 +3634,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6082188015674828364}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 215cf41841f66974daa52b6af8d7fb4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 163bf40d0fb54cc47ba1e21739a34864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: 1
   itemID: 2
+  descriptionOverlay: {fileID: 674384719}
+  descriptionText: {fileID: 468545660}
 --- !u!114 &6082188015674828370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3736,11 +3743,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6082188015677356738}
   - component: {fileID: 6082188015677356736}
+  - component: {fileID: 6082188015677356799}
   - component: {fileID: 6082188015677356739}
   - component: {fileID: 6082188015677356798}
-  - component: {fileID: 6082188015677356799}
   m_Layer: 5
-  m_Name: Red/Yellow
+  m_Name: Red/Yellow Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3786,9 +3793,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
-        m_MethodName: GetItemUncommon
-        m_Mode: 3
+      - m_Target: {fileID: 6082188015677356799}
+        m_MethodName: DisplayItem
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3808,11 +3815,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6082188015677356797}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 215cf41841f66974daa52b6af8d7fb4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 163bf40d0fb54cc47ba1e21739a34864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: 1
   itemID: 23
+  descriptionOverlay: {fileID: 674384719}
+  descriptionText: {fileID: 468545660}
 --- !u!224 &6082188015684948640
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3874,7 +3882,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2077574435}
-        m_MethodName: closeAll
+        m_MethodName: CloseAll
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3952,11 +3960,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6082188015686287894}
   - component: {fileID: 6082188015686287892}
+  - component: {fileID: 6082188015686287891}
   - component: {fileID: 6082188015686287895}
   - component: {fileID: 6082188015686287890}
-  - component: {fileID: 6082188015686287891}
   m_Layer: 5
-  m_Name: Green Alien 1
+  m_Name: Green Standing Alien
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4002,15 +4010,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
-        m_MethodName: GetItemCommon
-        m_Mode: 3
+      - m_Target: {fileID: 6082188015686287891}
+        m_MethodName: DisplayItem
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Green Standing Alien
           m_BoolArgument: 0
         m_CallState: 1
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -4024,11 +4032,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6082188015686287889}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 215cf41841f66974daa52b6af8d7fb4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 163bf40d0fb54cc47ba1e21739a34864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: 0
   itemID: 0
+  descriptionOverlay: {fileID: 674384719}
+  descriptionText: {fileID: 468545660}
 --- !u!222 &6082188015686287892
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4132,9 +4141,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6082188015708121755}
   - component: {fileID: 6082188015708121753}
+  - component: {fileID: 6082188015708121757}
   - component: {fileID: 6082188015708121752}
   - component: {fileID: 6082188015708121756}
-  - component: {fileID: 6082188015708121757}
   m_Layer: 5
   m_Name: Narwhal
   m_TagString: Untagged
@@ -4201,9 +4210,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
-        m_MethodName: GetItemRare
-        m_Mode: 3
+      - m_Target: {fileID: 6082188015708121757}
+        m_MethodName: DisplayItem
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4223,11 +4232,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6082188015708121754}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 215cf41841f66974daa52b6af8d7fb4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 163bf40d0fb54cc47ba1e21739a34864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: 2
   itemID: 11
+  descriptionOverlay: {fileID: 674384719}
+  descriptionText: {fileID: 468545660}
 --- !u!114 &6082188015748442640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4275,11 +4285,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6082188015748442643}
   - component: {fileID: 6082188015748442641}
+  - component: {fileID: 6082188015748442645}
   - component: {fileID: 6082188015748442640}
   - component: {fileID: 6082188015748442644}
-  - component: {fileID: 6082188015748442645}
   m_Layer: 5
-  m_Name: Blue
+  m_Name: Blue Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4344,9 +4354,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
-        m_MethodName: GetItemCommon
-        m_Mode: 3
+      - m_Target: {fileID: 6082188015748442645}
+        m_MethodName: DisplayItem
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4366,11 +4376,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6082188015748442642}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 215cf41841f66974daa52b6af8d7fb4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 163bf40d0fb54cc47ba1e21739a34864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: 0
   itemID: 20
+  descriptionOverlay: {fileID: 674384719}
+  descriptionText: {fileID: 468545660}
 --- !u!114 &6082188015802535044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4418,11 +4429,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6082188015802535047}
   - component: {fileID: 6082188015802535045}
+  - component: {fileID: 6082188015802535049}
   - component: {fileID: 6082188015802535044}
   - component: {fileID: 6082188015802535048}
-  - component: {fileID: 6082188015802535049}
   m_Layer: 5
-  m_Name: Tuffy
+  m_Name: Tuffy Bear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4487,9 +4498,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
-        m_MethodName: GetItemRare
-        m_Mode: 3
+      - m_Target: {fileID: 6082188015802535049}
+        m_MethodName: DisplayItem
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4509,11 +4520,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6082188015802535046}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 215cf41841f66974daa52b6af8d7fb4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 163bf40d0fb54cc47ba1e21739a34864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: 2
   itemID: 18
+  descriptionOverlay: {fileID: 674384719}
+  descriptionText: {fileID: 468545660}
 --- !u!222 &6082188015814601484
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4670,7 +4682,7 @@ GameObject:
   - component: {fileID: 6082188015827146707}
   - component: {fileID: 6082188015827146706}
   m_Layer: 5
-  m_Name: Bears
+  m_Name: Bears Tab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4787,9 +4799,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6082188015892443485}
   - component: {fileID: 6082188015892443427}
+  - component: {fileID: 6082188015892443487}
   - component: {fileID: 6082188015892443426}
   - component: {fileID: 6082188015892443486}
-  - component: {fileID: 6082188015892443487}
   m_Layer: 5
   m_Name: Pig
   m_TagString: Untagged
@@ -4856,9 +4868,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
-        m_MethodName: GetItemCommon
-        m_Mode: 3
+      - m_Target: {fileID: 6082188015892443487}
+        m_MethodName: DisplayItem
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4878,11 +4890,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6082188015892443484}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 215cf41841f66974daa52b6af8d7fb4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 163bf40d0fb54cc47ba1e21739a34864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: 0
   itemID: 6
+  descriptionOverlay: {fileID: 674384719}
+  descriptionText: {fileID: 468545660}
 --- !u!1 &6082188015922242000
 GameObject:
   m_ObjectHideFlags: 0
@@ -4971,7 +4984,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2077574435}
-        m_MethodName: openPage
+        m_MethodName: OpenPage
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5022,11 +5035,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6082188015926436318}
   - component: {fileID: 6082188015926436316}
+  - component: {fileID: 6082188015926436315}
   - component: {fileID: 6082188015926436319}
   - component: {fileID: 6082188015926436314}
-  - component: {fileID: 6082188015926436315}
   m_Layer: 5
-  m_Name: Pooh
+  m_Name: Pooh Bear Bear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5072,9 +5085,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
-        m_MethodName: GetItemUltraRare
-        m_Mode: 3
+      - m_Target: {fileID: 6082188015926436315}
+        m_MethodName: DisplayItem
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5094,11 +5107,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6082188015926436313}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 215cf41841f66974daa52b6af8d7fb4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 163bf40d0fb54cc47ba1e21739a34864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: 3
   itemID: 19
+  descriptionOverlay: {fileID: 674384719}
+  descriptionText: {fileID: 468545660}
 --- !u!222 &6082188015926436316
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5213,11 +5227,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6082188015936798312}
   - component: {fileID: 6082188015936798318}
+  - component: {fileID: 6082188015936798317}
   - component: {fileID: 6082188015936798313}
   - component: {fileID: 6082188015936798316}
-  - component: {fileID: 6082188015936798317}
   m_Layer: 5
-  m_Name: Butterfly
+  m_Name: Butterfly Bear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5263,9 +5277,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
-        m_MethodName: GetItemCommon
-        m_Mode: 3
+      - m_Target: {fileID: 6082188015936798317}
+        m_MethodName: DisplayItem
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5285,11 +5299,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6082188015936798315}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 215cf41841f66974daa52b6af8d7fb4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 163bf40d0fb54cc47ba1e21739a34864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: 0
   itemID: 14
+  descriptionOverlay: {fileID: 674384719}
+  descriptionText: {fileID: 468545660}
 --- !u!222 &6082188015936798318
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5435,11 +5450,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6082188016117777872}
   - component: {fileID: 6082188016117777878}
+  - component: {fileID: 6082188016117777877}
   - component: {fileID: 6082188016117777873}
   - component: {fileID: 6082188016117777876}
-  - component: {fileID: 6082188016117777877}
   m_Layer: 5
-  m_Name: Mushroom
+  m_Name: Mushroom Bear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5485,9 +5500,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
-        m_MethodName: GetItemCommon
-        m_Mode: 3
+      - m_Target: {fileID: 6082188016117777877}
+        m_MethodName: DisplayItem
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5507,11 +5522,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6082188016117777875}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 215cf41841f66974daa52b6af8d7fb4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 163bf40d0fb54cc47ba1e21739a34864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: 0
   itemID: 13
+  descriptionOverlay: {fileID: 674384719}
+  descriptionText: {fileID: 468545660}
 --- !u!222 &6082188016117777878
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5605,11 +5621,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6082188016165108234}
   - component: {fileID: 6082188016165108232}
+  - component: {fileID: 6082188016165108231}
   - component: {fileID: 6082188016165108235}
   - component: {fileID: 6082188016165108230}
-  - component: {fileID: 6082188016165108231}
   m_Layer: 5
-  m_Name: Purple Alien
+  m_Name: Purple Cool Kid Alien
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5655,9 +5671,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
-        m_MethodName: GetItemRare
-        m_Mode: 3
+      - m_Target: {fileID: 6082188016165108231}
+        m_MethodName: DisplayItem
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5677,11 +5693,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6082188016165108229}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 215cf41841f66974daa52b6af8d7fb4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 163bf40d0fb54cc47ba1e21739a34864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: 2
   itemID: 4
+  descriptionOverlay: {fileID: 674384719}
+  descriptionText: {fileID: 468545660}
 --- !u!222 &6082188016165108232
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6058,11 +6075,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6082188016291356189}
   - component: {fileID: 6082188016291356387}
+  - component: {fileID: 6082188016291356191}
   - component: {fileID: 6082188016291356386}
   - component: {fileID: 6082188016291356190}
-  - component: {fileID: 6082188016291356191}
   m_Layer: 5
-  m_Name: Powder
+  m_Name: Mysterious White Powder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6127,9 +6144,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
-        m_MethodName: GetItemUltraRare
-        m_Mode: 3
+      - m_Target: {fileID: 6082188016291356191}
+        m_MethodName: DisplayItem
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6149,11 +6166,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6082188016291356188}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 215cf41841f66974daa52b6af8d7fb4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 163bf40d0fb54cc47ba1e21739a34864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: 3
   itemID: 34
+  descriptionOverlay: {fileID: 674384719}
+  descriptionText: {fileID: 468545660}
 --- !u!114 &6082188016291356386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6280,11 +6298,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6082188016349474186}
   - component: {fileID: 6082188016349474184}
+  - component: {fileID: 6082188016349474183}
   - component: {fileID: 6082188016349474187}
   - component: {fileID: 6082188016349474182}
-  - component: {fileID: 6082188016349474183}
   m_Layer: 5
-  m_Name: Blue Alien
+  m_Name: Blue Dabbing Alien
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6330,9 +6348,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
-        m_MethodName: GetItemUltraRare
-        m_Mode: 3
+      - m_Target: {fileID: 6082188016349474183}
+        m_MethodName: DisplayItem
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6352,11 +6370,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6082188016349474181}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 215cf41841f66974daa52b6af8d7fb4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 163bf40d0fb54cc47ba1e21739a34864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: 3
   itemID: 5
+  descriptionOverlay: {fileID: 674384719}
+  descriptionText: {fileID: 468545660}
 --- !u!222 &6082188016349474184
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6577,11 +6596,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6082188016406279685}
   - component: {fileID: 6082188016406279691}
+  - component: {fileID: 6082188016406279687}
   - component: {fileID: 6082188016406279690}
   - component: {fileID: 6082188016406279686}
-  - component: {fileID: 6082188016406279687}
   m_Layer: 5
-  m_Name: Purple/Pink
+  m_Name: Purple/Pink Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6646,9 +6665,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
-        m_MethodName: GetItemUncommon
-        m_Mode: 3
+      - m_Target: {fileID: 6082188016406279687}
+        m_MethodName: DisplayItem
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6668,11 +6687,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6082188016406279684}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 215cf41841f66974daa52b6af8d7fb4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 163bf40d0fb54cc47ba1e21739a34864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: 1
   itemID: 22
+  descriptionOverlay: {fileID: 674384719}
+  descriptionText: {fileID: 468545660}
 --- !u!114 &6082188016406279690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6720,11 +6740,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6082188016519018937}
   - component: {fileID: 6082188016519018943}
+  - component: {fileID: 6082188016519018939}
   - component: {fileID: 6082188016519018942}
   - component: {fileID: 6082188016519018938}
-  - component: {fileID: 6082188016519018939}
   m_Layer: 5
-  m_Name: Yellow Alien
+  m_Name: Yellow Skateboarding Alien
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6789,9 +6809,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
-        m_MethodName: GetItemUncommon
-        m_Mode: 3
+      - m_Target: {fileID: 6082188016519018939}
+        m_MethodName: DisplayItem
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6811,11 +6831,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6082188016519018936}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 215cf41841f66974daa52b6af8d7fb4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 163bf40d0fb54cc47ba1e21739a34864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: 1
   itemID: 3
+  descriptionOverlay: {fileID: 674384719}
+  descriptionText: {fileID: 468545660}
 --- !u!114 &6082188016519018942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6941,7 +6962,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2077574435}
-        m_MethodName: openPage
+        m_MethodName: OpenPage
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7269,11 +7290,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6082188016641921104}
   - component: {fileID: 6082188016641921110}
+  - component: {fileID: 6082188016641921109}
   - component: {fileID: 6082188016641921105}
   - component: {fileID: 6082188016641921108}
-  - component: {fileID: 6082188016641921109}
   m_Layer: 5
-  m_Name: Nugget
+  m_Name: Gold Nugget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7319,9 +7340,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
-        m_MethodName: GetItemUltraRare
-        m_Mode: 3
+      - m_Target: {fileID: 6082188016641921109}
+        m_MethodName: DisplayItem
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7341,11 +7362,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6082188016641921107}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 215cf41841f66974daa52b6af8d7fb4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 163bf40d0fb54cc47ba1e21739a34864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: 3
   itemID: 35
+  descriptionOverlay: {fileID: 674384719}
+  descriptionText: {fileID: 468545660}
 --- !u!222 &6082188016641921110
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7366,7 +7388,7 @@ GameObject:
   - component: {fileID: 6082188016655552364}
   - component: {fileID: 6082188016655552367}
   m_Layer: 5
-  m_Name: Hands
+  m_Name: Hands Tab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7445,11 +7467,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6082188016658631201}
   - component: {fileID: 6082188016658631207}
+  - component: {fileID: 6082188016658631203}
   - component: {fileID: 6082188016658631206}
   - component: {fileID: 6082188016658631202}
-  - component: {fileID: 6082188016658631203}
   m_Layer: 5
-  m_Name: Honey Pot
+  m_Name: Honey Pot Bear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7514,9 +7536,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
-        m_MethodName: GetItemUncommon
-        m_Mode: 3
+      - m_Target: {fileID: 6082188016658631203}
+        m_MethodName: DisplayItem
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7536,11 +7558,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6082188016658631200}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 215cf41841f66974daa52b6af8d7fb4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 163bf40d0fb54cc47ba1e21739a34864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: 1
   itemID: 16
+  descriptionOverlay: {fileID: 674384719}
+  descriptionText: {fileID: 468545660}
 --- !u!114 &6082188016658631206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7588,11 +7611,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6082188016660091738}
   - component: {fileID: 6082188016660091736}
+  - component: {fileID: 6082188016660091735}
   - component: {fileID: 6082188016660091739}
   - component: {fileID: 6082188016660091734}
-  - component: {fileID: 6082188016660091735}
   m_Layer: 5
-  m_Name: Pukicho
+  m_Name: Fat Pukicho Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7638,9 +7661,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
-        m_MethodName: GetItemUltraRare
-        m_Mode: 3
+      - m_Target: {fileID: 6082188016660091735}
+        m_MethodName: DisplayItem
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7660,11 +7683,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6082188016660091733}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 215cf41841f66974daa52b6af8d7fb4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 163bf40d0fb54cc47ba1e21739a34864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: 3
   itemID: 26
+  descriptionOverlay: {fileID: 674384719}
+  descriptionText: {fileID: 468545660}
 --- !u!222 &6082188016660091736
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7889,9 +7913,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6082188016774731473}
   - component: {fileID: 6082188016774731479}
+  - component: {fileID: 6082188016774731475}
   - component: {fileID: 6082188016774731478}
   - component: {fileID: 6082188016774731474}
-  - component: {fileID: 6082188016774731475}
   m_Layer: 5
   m_Name: Octopus
   m_TagString: Untagged
@@ -7958,9 +7982,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
-        m_MethodName: GetItemRare
-        m_Mode: 3
+      - m_Target: {fileID: 6082188016774731475}
+        m_MethodName: DisplayItem
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7980,11 +8004,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6082188016774731472}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 215cf41841f66974daa52b6af8d7fb4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 163bf40d0fb54cc47ba1e21739a34864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: 2
   itemID: 10
+  descriptionOverlay: {fileID: 674384719}
+  descriptionText: {fileID: 468545660}
 --- !u!114 &6082188016774731478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8069,9 +8094,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6082188016782480123}
   - component: {fileID: 6082188016782480121}
+  - component: {fileID: 6082188016782480125}
   - component: {fileID: 6082188016782480120}
   - component: {fileID: 6082188016782480124}
-  - component: {fileID: 6082188016782480125}
   m_Layer: 5
   m_Name: Shibe
   m_TagString: Untagged
@@ -8138,9 +8163,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
-        m_MethodName: GetItemUltraRare
-        m_Mode: 3
+      - m_Target: {fileID: 6082188016782480125}
+        m_MethodName: DisplayItem
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8160,11 +8185,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6082188016782480122}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 215cf41841f66974daa52b6af8d7fb4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 163bf40d0fb54cc47ba1e21739a34864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: 3
   itemID: 12
+  descriptionOverlay: {fileID: 674384719}
+  descriptionText: {fileID: 468545660}
 --- !u!224 &6082188016782819868
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8591,11 +8617,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6082188017015254231}
   - component: {fileID: 6082188017015254229}
+  - component: {fileID: 6082188017015254233}
   - component: {fileID: 6082188017015254228}
   - component: {fileID: 6082188017015254232}
-  - component: {fileID: 6082188017015254233}
   m_Layer: 5
-  m_Name: Redacted
+  m_Name: '[REDACTED]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8660,9 +8686,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
-        m_MethodName: GetItemUltraRare
-        m_Mode: 3
+      - m_Target: {fileID: 6082188017015254233}
+        m_MethodName: DisplayItem
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8682,11 +8708,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6082188017015254230}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 215cf41841f66974daa52b6af8d7fb4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 163bf40d0fb54cc47ba1e21739a34864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: 3
   itemID: 33
+  descriptionOverlay: {fileID: 674384719}
+  descriptionText: {fileID: 468545660}
 --- !u!114 &6082188017123059496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8860,7 +8887,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2077574435}
-        m_MethodName: openPage
+        m_MethodName: OpenPage
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9240,7 +9267,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2077574435}
-        m_MethodName: openPage
+        m_MethodName: OpenPage
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9338,9 +9365,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6082188017404201629}
   - component: {fileID: 6082188017404201827}
+  - component: {fileID: 6082188017404201631}
   - component: {fileID: 6082188017404201826}
   - component: {fileID: 6082188017404201630}
-  - component: {fileID: 6082188017404201631}
   m_Layer: 5
   m_Name: Bear
   m_TagString: Untagged
@@ -9407,9 +9434,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
-        m_MethodName: GetItemUncommon
-        m_Mode: 3
+      - m_Target: {fileID: 6082188017404201631}
+        m_MethodName: DisplayItem
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -9429,11 +9456,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6082188017404201628}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 215cf41841f66974daa52b6af8d7fb4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 163bf40d0fb54cc47ba1e21739a34864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: 1
   itemID: 8
+  descriptionOverlay: {fileID: 674384719}
+  descriptionText: {fileID: 468545660}
 --- !u!114 &6082188017404201826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9483,7 +9511,7 @@ GameObject:
   - component: {fileID: 6082188017435252340}
   - component: {fileID: 6082188017435252343}
   m_Layer: 5
-  m_Name: Aliens
+  m_Name: Aliens Tab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9715,7 +9743,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2077574435}
-        m_MethodName: openPage
+        m_MethodName: OpenPage
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9897,11 +9925,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6082188017484290396}
   - component: {fileID: 6082188017484290338}
+  - component: {fileID: 6082188017484290401}
   - component: {fileID: 6082188017484290397}
   - component: {fileID: 6082188017484290400}
-  - component: {fileID: 6082188017484290401}
   m_Layer: 5
-  m_Name: Apple
+  m_Name: Apple Bear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9947,9 +9975,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
-        m_MethodName: GetItemUncommon
-        m_Mode: 3
+      - m_Target: {fileID: 6082188017484290401}
+        m_MethodName: DisplayItem
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -9969,11 +9997,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6082188017484290399}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 215cf41841f66974daa52b6af8d7fb4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 163bf40d0fb54cc47ba1e21739a34864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: 1
   itemID: 15
+  descriptionOverlay: {fileID: 674384719}
+  descriptionText: {fileID: 468545660}
 --- !u!114 &6082188017493839216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10117,7 +10146,7 @@ GameObject:
   - component: {fileID: 6082188017505872682}
   - component: {fileID: 6082188017505872677}
   m_Layer: 5
-  m_Name: ???
+  m_Name: ??? Tab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10192,7 +10221,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2077574435}
-        m_MethodName: openPage
+        m_MethodName: OpenPage
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10328,7 +10357,7 @@ GameObject:
   - component: {fileID: 6082188017596002418}
   - component: {fileID: 6082188017596002413}
   m_Layer: 5
-  m_Name: Balls
+  m_Name: Balls Tab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10389,11 +10418,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6082188017606829315}
   - component: {fileID: 6082188017606829313}
+  - component: {fileID: 6082188017606829317}
   - component: {fileID: 6082188017606829312}
   - component: {fileID: 6082188017606829316}
-  - component: {fileID: 6082188017606829317}
   m_Layer: 5
-  m_Name: Watermelon
+  m_Name: Watermelon Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10458,9 +10487,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
-        m_MethodName: GetItemRare
-        m_Mode: 3
+      - m_Target: {fileID: 6082188017606829317}
+        m_MethodName: DisplayItem
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -10480,11 +10509,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6082188017606829314}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 215cf41841f66974daa52b6af8d7fb4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 163bf40d0fb54cc47ba1e21739a34864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: 2
   itemID: 24
+  descriptionOverlay: {fileID: 674384719}
+  descriptionText: {fileID: 468545660}
 --- !u!1 &6082188017609001685
 GameObject:
   m_ObjectHideFlags: 0
@@ -10576,7 +10606,7 @@ GameObject:
   - component: {fileID: 6082188017657995576}
   - component: {fileID: 6082188017657995579}
   m_Layer: 5
-  m_Name: Animals
+  m_Name: Animals Tab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10731,11 +10761,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6082188017683717973}
   - component: {fileID: 6082188017683717979}
+  - component: {fileID: 6082188017683717975}
   - component: {fileID: 6082188017683717978}
   - component: {fileID: 6082188017683717974}
-  - component: {fileID: 6082188017683717975}
   m_Layer: 5
-  m_Name: Banana
+  m_Name: Banana Bear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10800,9 +10830,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
-        m_MethodName: GetItemRare
-        m_Mode: 3
+      - m_Target: {fileID: 6082188017683717975}
+        m_MethodName: DisplayItem
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -10822,11 +10852,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6082188017683717972}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 215cf41841f66974daa52b6af8d7fb4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 163bf40d0fb54cc47ba1e21739a34864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: 2
   itemID: 17
+  descriptionOverlay: {fileID: 674384719}
+  descriptionText: {fileID: 468545660}
 --- !u!114 &6082188017683717978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10874,9 +10905,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6082188017723744129}
   - component: {fileID: 6082188017723744135}
+  - component: {fileID: 6082188017723744131}
   - component: {fileID: 6082188017723744134}
   - component: {fileID: 6082188017723744130}
-  - component: {fileID: 6082188017723744131}
   m_Layer: 5
   m_Name: Rabbit
   m_TagString: Untagged
@@ -10943,9 +10974,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
-        m_MethodName: GetItemUncommon
-        m_Mode: 3
+      - m_Target: {fileID: 6082188017723744131}
+        m_MethodName: DisplayItem
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -10965,11 +10996,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6082188017723744128}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 215cf41841f66974daa52b6af8d7fb4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 163bf40d0fb54cc47ba1e21739a34864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: 1
   itemID: 9
+  descriptionOverlay: {fileID: 674384719}
+  descriptionText: {fileID: 468545660}
 --- !u!114 &6082188017723744134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11017,11 +11049,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6082188017757475173}
   - component: {fileID: 6082188017757475179}
+  - component: {fileID: 6082188017757475175}
   - component: {fileID: 6082188017757475178}
   - component: {fileID: 6082188017757475174}
-  - component: {fileID: 6082188017757475175}
   m_Layer: 5
-  m_Name: Green
+  m_Name: Green Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11086,9 +11118,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077574435}
-        m_MethodName: GetItemCommon
-        m_Mode: 3
+      - m_Target: {fileID: 6082188017757475175}
+        m_MethodName: DisplayItem
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -11108,11 +11140,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6082188017757475172}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 215cf41841f66974daa52b6af8d7fb4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 163bf40d0fb54cc47ba1e21739a34864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rarity: 0
   itemID: 21
+  descriptionOverlay: {fileID: 674384719}
+  descriptionText: {fileID: 468545660}
 --- !u!114 &6082188017757475178
 MonoBehaviour:
   m_ObjectHideFlags: 0

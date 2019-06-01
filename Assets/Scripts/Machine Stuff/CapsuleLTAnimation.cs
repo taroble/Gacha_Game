@@ -33,7 +33,7 @@ public class CapsuleLTAnimation : MonoBehaviour
 
 
 
-    void Start()
+    void Awake()
     {
         receivedItem = GameMaster.instance.GrabRandomItem();
         sr = GetComponent<SpriteRenderer>();
@@ -52,11 +52,6 @@ public class CapsuleLTAnimation : MonoBehaviour
                 sr.sprite = ultraRareCapsule;
                 break;
         }
-        Enlarge();
-    }
-
-    void Enlarge()
-    {
         StartCoroutine(GachaFullAnimation());
     }
 

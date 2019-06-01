@@ -21,7 +21,6 @@ public class MachineKnob : MonoBehaviour
         state = State.Idle;
         GameMaster.instance.UpdateCoinCounter();
         aSource = GetComponent<AudioSource>();
-
     }
 
     void Update()
@@ -66,7 +65,7 @@ public class MachineKnob : MonoBehaviour
             {
                 GameMaster.instance.SubtractCoins(1);
                 state = State.Twisting;
-                float rotateAmt = (Random.Range(0, 20) == 0) ? -6969f : -720f;
+                float rotateAmt = (Random.Range(0, 100) == 0) ? -6969f : -720f;
                 LeanTween.rotateZ(gameObject, rotateAmt, 1).setEase(LeanTweenType.easeOutCubic).setOnComplete(() =>
                 {
                     state = State.Dispensing;
