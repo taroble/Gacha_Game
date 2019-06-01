@@ -12,7 +12,12 @@ public class GameMaster : MonoBehaviour
     List<Item> uncommonItems = new List<Item>();
     List<Item> rareItems = new List<Item>();
     List<Item> ultraRareItems = new List<Item>();
-    float[] rarityChances = { 45, 30, 16, 9 };
+
+    float[] rarityChances = { 75.0f, 20.0f, 4.9f, 0.1f };
+    //Index 0: Common chance
+    //Index 1: Uncommon chance
+    //Index 2: Rare chance
+    //Index 3: Ultra-Rare chance
 
     Dictionary<int, Item> items = new Dictionary<int, Item>();
 
@@ -129,19 +134,19 @@ public class GameMaster : MonoBehaviour
         float ultraRareWeight = rarityChances[3];
 
         float randNum = Random.Range(0f, 100f);
-        if (randNum <= commonWeight && randNum > uncommonWeight)        //If 100 > randNum > 55
+        if (randNum <= commonWeight && randNum > uncommonWeight)
         {
             receivedItem = commonItems[Random.Range(0, commonItems.Count)];
         }
-        else if (randNum <= uncommonWeight && randNum > rareWeight)     //If 55 > randNum > 25
+        else if (randNum <= uncommonWeight && randNum > rareWeight)
         {
             receivedItem = uncommonItems[Random.Range(0, uncommonItems.Count)];
         }
-        else if (randNum <= rareWeight && randNum > ultraRareWeight)    //If 25 > randNum > 9
+        else if (randNum <= rareWeight && randNum > ultraRareWeight)
         {
             receivedItem = rareItems[Random.Range(0, rareItems.Count)];
         }
-        else if (randNum <= ultraRareWeight && randNum > 0.001f)        //If 9 > randNum > 0
+        else if (randNum <= ultraRareWeight && randNum > 0.001f)
         {
             receivedItem = ultraRareItems[Random.Range(0, ultraRareItems.Count)];
         }
