@@ -20,7 +20,7 @@ public class CapsuleLTAnimation : MonoBehaviour
     [HideInInspector]
     public MachineKnob machineKnob;
     [HideInInspector]
-    public Item receivedItem;
+    public Item[] receivedItems;
 
     public GameObject topTextPrefab;
     public GameObject bottomTextPrefab;
@@ -35,9 +35,9 @@ public class CapsuleLTAnimation : MonoBehaviour
 
     void Awake()
     {
-        receivedItem = GameMaster.instance.GrabRandomItem();
+        receivedItems = GameMaster.instance.GrabRandomItems(1);
         sr = GetComponent<SpriteRenderer>();
-        switch (receivedItem.rarity)
+        switch (receivedItems[0].rarity)
         {
             case Item.Rarity.Common:
                 sr.sprite = commonCapsule;
@@ -111,7 +111,7 @@ public class CapsuleLTAnimation : MonoBehaviour
 
         lHalf = new GameObject("Left Half");
         lHalf.AddComponent<SpriteRenderer>();
-        switch (receivedItem.rarity)
+        switch (receivedItems[0].rarity)
         {
             case Item.Rarity.Common:
                 lHalf.GetComponent<SpriteRenderer>().sprite = commonCapsuleTop;
@@ -147,7 +147,7 @@ public class CapsuleLTAnimation : MonoBehaviour
         LeanTween.moveX(rHalf, rHalf.transform.position.x + 3, 0.5f).setEase(LeanTweenType.easeOutCubic);
 
         gachaItem = new GameObject("Gacha Item");
-        gachaItem.AddComponent<SpriteRenderer>().sprite = receivedItem.image;
+        gachaItem.AddComponent<SpriteRenderer>().sprite = receivedItems[0].image;
         gachaItem.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 0);
         gachaItem.GetComponent<SpriteRenderer>().sortingLayerName = "Foreground";
         gachaItem.GetComponent<SpriteRenderer>().sortingOrder = 3;
@@ -171,7 +171,7 @@ public class CapsuleLTAnimation : MonoBehaviour
 
         bottomText = Instantiate(bottomTextPrefab);
         bottomText.transform.SetParent(GameObject.FindGameObjectWithTag("Text Canvas").transform, false);
-        bottomText.GetComponent<TextMeshProUGUI>().text = receivedItem.itemName;
+        bottomText.GetComponent<TextMeshProUGUI>().text = receivedItems[0].itemName;
         TextMeshProUGUI bottomTMP = bottomText.GetComponent<TextMeshProUGUI>();
         bottomTMP.color = new Color(bottomTMP.color.r, bottomTMP.color.g, bottomTMP.color.b, 0);
         LeanTween.moveY(bottomText, transform.position.y - 3, 1.5f).setEase(LeanTweenType.easeOutCubic);
@@ -196,7 +196,7 @@ public class CapsuleLTAnimation : MonoBehaviour
         lHalf.transform.localScale *= 2;
         lHalf.transform.eulerAngles = new Vector3(lHalf.transform.eulerAngles.x, lHalf.transform.eulerAngles.y, 90);
         lHalf.AddComponent<SpriteRenderer>();
-        switch (receivedItem.rarity)
+        switch (receivedItems[0].rarity)
         {
             case Item.Rarity.Common:
                 lHalf.GetComponent<SpriteRenderer>().sprite = commonCapsuleTop;
@@ -225,7 +225,7 @@ public class CapsuleLTAnimation : MonoBehaviour
 
         gachaItem = new GameObject("Gacha Item");
         gachaItem.transform.localScale *= 2;
-        gachaItem.AddComponent<SpriteRenderer>().sprite = receivedItem.image;
+        gachaItem.AddComponent<SpriteRenderer>().sprite = receivedItems[0].image;
         gachaItem.GetComponent<SpriteRenderer>().sortingLayerName = "Foreground";
         gachaItem.GetComponent<SpriteRenderer>().sortingOrder = 3;
 
@@ -237,7 +237,7 @@ public class CapsuleLTAnimation : MonoBehaviour
 
         bottomText = Instantiate(bottomTextPrefab);
         bottomText.transform.SetParent(GameObject.FindGameObjectWithTag("Text Canvas").transform, false);
-        bottomText.GetComponent<TextMeshProUGUI>().text = receivedItem.itemName;
+        bottomText.GetComponent<TextMeshProUGUI>().text = receivedItems[0].itemName;
         bottomText.transform.localScale = new Vector2(3.5f, 3.5f);
         bottomText.transform.Translate(Vector2.down * 3);
     }

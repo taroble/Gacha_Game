@@ -23,8 +23,6 @@ public class GameMaster : MonoBehaviour
 
     public Sprite[] itemImages;
 
-    int coins;
-
 
 
     void Awake()
@@ -43,7 +41,7 @@ public class GameMaster : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.RightShift))
         {
-            coins += 100;
+            PlayerPrefs.SetInt("Coin Amount", PlayerPrefs.GetInt("Coin Amount", 0) + 100);
             UpdateCoinCounter();
         }
     }
@@ -56,7 +54,6 @@ public class GameMaster : MonoBehaviour
     //2 = CATEGORY
     //3 = RARITY
     //4 = FLAVOR TEXT
-    //5 = AMOUNT OWNED
     public void PopulateAllDataStructures()
     {
         string[] data = itemData.text.Split(new char[] { '\n' });
@@ -91,7 +88,6 @@ public class GameMaster : MonoBehaviour
             }
 
             newItem.flavorText = row[4];
-            int.TryParse(row[5], out newItem.amountOwned);
             newItem.image = itemImages[i - 1];
 
             items.Add(newItem.id, newItem);
@@ -102,62 +98,69 @@ public class GameMaster : MonoBehaviour
 
     public int GetCoinAmount()
     {
-        return coins;
+        return PlayerPrefs.GetInt("Coin Amount", 0);
     }
 
     public void AddCoins(int amountOfCoins)
     {
-        coins += amountOfCoins;
+        int coins = PlayerPrefs.GetInt("Coin Amount", 0);
+        PlayerPrefs.SetInt("Coin Amount", coins + amountOfCoins);
         UpdateCoinCounter();
     }
 
     public void SubtractCoins(int amountOfCoins)
     {
-        coins -= amountOfCoins;
+        int coins = PlayerPrefs.GetInt("Coin Amount", 0);
+        PlayerPrefs.SetInt("Coin Amount", coins - amountOfCoins);
         UpdateCoinCounter();
     }
 
     public void UpdateCoinCounter()
     {
+        int coins = PlayerPrefs.GetInt("Coin Amount", 0);
         GameObject.FindGameObjectWithTag("Coin Counter").GetComponent<TextMeshProUGUI>().text = coins.ToString();
     }
 
 
 
-    public Item GrabRandomItem()
+    public Item[] GrabRandomItems(int amount)
     {
-        Item receivedItem;
+        Item[] receivedItems = new Item[amount];
 
         float commonWeight = rarityChances[0] + rarityChances[1] + rarityChances[2] + rarityChances[3];
         float uncommonWeight = rarityChances[1] + rarityChances[2] + rarityChances[3];
         float rareWeight = rarityChances[2] + rarityChances[3];
         float ultraRareWeight = rarityChances[3];
 
-        float randNum = Random.Range(0f, 100f);
-        if (randNum <= commonWeight && randNum > uncommonWeight)
+        for (int i = 0; i < amount; i++)
         {
-            receivedItem = commonItems[Random.Range(0, commonItems.Count)];
-        }
-        else if (randNum <= uncommonWeight && randNum > rareWeight)
-        {
-            receivedItem = uncommonItems[Random.Range(0, uncommonItems.Count)];
-        }
-        else if (randNum <= rareWeight && randNum > ultraRareWeight)
-        {
-            receivedItem = rareItems[Random.Range(0, rareItems.Count)];
-        }
-        else if (randNum <= ultraRareWeight && randNum > 0.001f)
-        {
-            receivedItem = ultraRareItems[Random.Range(0, ultraRareItems.Count)];
-        }
-        else
-        {
-            receivedItem = commonItems[Random.Range(0, commonItems.Count)];
+            float randNum = Random.Range(0f, 100f);
+            if (randNum <= commonWeight && randNum > uncommonWeight)
+            {
+                receivedItems[i] = commonItems[Random.Range(0, commonItems.Count)];
+            }
+            else if (randNum <= uncommonWeight && randNum > rareWeight)
+            {
+                receivedItems[i] = uncommonItems[Random.Range(0, uncommonItems.Count)];
+            }
+            else if (randNum <= rareWeight && randNum > ultraRareWeight)
+            {
+                receivedItems[i] = rareItems[Random.Range(0, rareItems.Count)];
+            }
+            else if (randNum <= ultraRareWeight && randNum > 0.001f)
+            {
+                receivedItems[i] = ultraRareItems[Random.Range(0, ultraRareItems.Count)];
+            }
+            else
+            {
+                receivedItems[i] = commonItems[Random.Range(0, commonItems.Count)];
+            }
+
+            PlayerPrefs.SetInt(receivedItems[i].itemName, PlayerPrefs.GetInt(receivedItems[i].itemName, 0) + 1);
+            //print(PlayerPrefs.GetInt(receivedItems[i].itemName));
         }
 
-        receivedItem.amountOwned++;
-        //Debug.Log(receivedItem.itemName + ": " + receivedItem.amountOwned);
-        return receivedItem;
+        return receivedItems;
     }
 
     public Item GetItem(int itemID)

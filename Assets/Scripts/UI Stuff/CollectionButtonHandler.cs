@@ -18,7 +18,7 @@ public class CollectionButtonHandler : MonoBehaviour
     {
         //Decide if the button should be interactable or not
         item = GameMaster.instance.GetItem(itemID);
-        if (item.amountOwned > 0) GetComponent<Button>().interactable = true;
+        if (PlayerPrefs.GetInt(item.itemName, 0) > 0) GetComponent<Button>().interactable = true;
 
         //Get access to all display overlay elements
         displayName = displayOverlay.transform.Find("Name").GetComponent<Text>();
@@ -31,7 +31,7 @@ public class CollectionButtonHandler : MonoBehaviour
     {
         displayOverlay.SetActive(true);
         displayName.text = item.itemName;
-        displayAmountOwned.text = "Amount owned: " + item.amountOwned;
+        displayAmountOwned.text = "Amount owned: " + PlayerPrefs.GetInt(item.itemName, 0);
         displayImage.sprite = GameMaster.instance.itemImages[item.id];
         displayDescription.text = item.flavorText;
     }
